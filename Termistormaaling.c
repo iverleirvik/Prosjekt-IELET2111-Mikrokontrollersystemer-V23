@@ -21,13 +21,13 @@ uint16_t count;
 int main(void)
 {
 	USART3_init();		// Initialiserer USART
-	ADC0_init(ADC_MUXPOS_AIN6_gc);		// Initialiserer ADC på AIN6 kanal
+	ADC0_init(ADC_MUXPOS_AIN6_gc);		// Initialiserer ADC pÃ¥ AIN6 kanal
 	
 	while (1)
 	{
 		count++;
 		
-		if (count == 100)		// If som kjører hver 100ede sample
+		if (count == 100)		// If som kjÃ¸rer hver 100ede sample
 		{
 			printf("Temp: %f\r\n\n\n", temp(ADC0_read()));
 			count = 0;
