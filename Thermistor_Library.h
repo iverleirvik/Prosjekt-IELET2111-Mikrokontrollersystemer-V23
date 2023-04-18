@@ -1,0 +1,1 @@
+float temp(float adcVal);
