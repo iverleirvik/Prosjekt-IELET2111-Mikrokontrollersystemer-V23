@@ -1,4 +1,7 @@
-#include <Arduino.h>
+#define F_CPU 4000000UL
+
+#include <avr/io.h>
+
 
 void setup() {
   // put your setup code here, to run once:
