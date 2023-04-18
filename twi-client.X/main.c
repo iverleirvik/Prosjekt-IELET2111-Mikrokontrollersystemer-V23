@@ -32,15 +32,15 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
     such restrictions will not apply to such third party software.
  */
 
-#include <xc.h>
+//#include <xc.h>
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <avr/eeprom.h>
 #include "i2cIO.h"
 
-#include "peripherals/CLKCTRL/CLKCTRL.h"
-#include "peripherals/TWI/TWI_client.h"
+
+#include "Client.h"
 #include "TWI_blockData.h"
 
 //avr:      sda=PA2 SCL=PA3
@@ -65,7 +65,7 @@ int main(void) {
     //volatile uint8_t data[DATA_SIZE];
 
     //Setup CPU Clocks
-    CLKCTRL_init();
+
 
     //Setup TWI I/O
     TWI_initPins();

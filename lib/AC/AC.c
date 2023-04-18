@@ -1,17 +1,7 @@
-#define F_CPU 4000000UL
 #include <avr/io.h>
 #include <util/delay.h>
-#define interval_sek(sek,CLKSEL_scale) ((uint16_t)(F_CPU * sek / CLKSEL_scale ))
+#include "AC.h"
 
-
-int main(void) {
-    AC0Init();
-    TCA0Init(1000);
-    AC1Init();
-    TCA1Init(1000);
-    while (1) {
-    }
-} 
 
 void AC0Init(void) {
     // set to output and add internal pullup.
