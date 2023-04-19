@@ -13,11 +13,22 @@ RTC_init(void) {
 
 }
 
+uint16_t posFlankToRPM(uint16_t posFlank) {
+	
+	return posFlank * 12; /* Deler på fem for fem blader på viften og multipliserer med seksti for minutt. */
+	
+}
+
 ISR(RTC_CNT_vect)	{
 	if(RTC.INTFLAGS & RTC_OVF_bm)	{
 			/* Kjør kode */
-			//secons ++;
-			//TCA0.SINGLE.CNT	= 0;
+			
+			USRP.leftFan.reserved4 = posFlankToRPM(TCA0.SINGLE.CNT);
+			TCA0.SINGLE.CNT	= 0;
+		
+			USRP.rightFan.reserved3 = posFlankToRPM(TCA1.SINGLE.CNT);
+			TCA1.SINGLE.CNT	= 0;
+		
 	}
 		
 	RTC.INTFLAGS |= RTC_OVF_bm;
