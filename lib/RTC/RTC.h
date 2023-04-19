@@ -3,6 +3,7 @@
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include <TWI/i2cIO.h>
 
 uint16_t *FanTiming;
 
