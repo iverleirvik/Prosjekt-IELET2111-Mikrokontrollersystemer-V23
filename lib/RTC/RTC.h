@@ -4,9 +4,13 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
-RTC_init(void) {
+uint16_t *FanTiming;
 
-  RTC.CTRLA |= RTC_RTCEN_bm | RTC_PRESCALER_DIV1024_gc;
+RTC_init(uint16_t *_fantiming) {
+	
+	fanTiming = _fantiming;
+	
+	RTC.CTRLA |= RTC_RTCEN_bm | RTC_PRESCALER_DIV1024_gc;
 	RTC.INTCTRL |= RTC_OVF_bm;
 	RTC.CLKSEL |= RTC_CLKSEL_OSC1K_gc;
 	RTC.PER |= 1;
@@ -28,6 +32,8 @@ ISR(RTC_CNT_vect)	{
 		
 			USRP.rightFan.reserved3 = posFlankToRPM(TCA1.SINGLE.CNT);
 			TCA1.SINGLE.CNT	= 0;
+		
+			*fanTiming++;
 		
 	}
 		
