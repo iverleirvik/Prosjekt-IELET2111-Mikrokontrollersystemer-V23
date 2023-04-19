@@ -7,6 +7,8 @@
 
 
 int main(void)  {
+
+    uint16_t * fanLimit;
   
     while(1) {
 
@@ -18,6 +20,8 @@ int main(void)  {
 
 void ledInit(void) {
     PORTB.DIRSET = PIN5_bm;
+    PORTB.DIRSET = PIN6_bm;
+    PORTB.DIRSET = PIN7_bm;
 }
 
 void checkTemp(void) {
@@ -31,6 +35,24 @@ void checkTemp(void) {
     }
 }
 
-void checkVolt(void) {
-    
+void checkSelfVolt(void) {
+    if (USRP.selfVoltage.voltage > USRP.selfVoltage.higherLimit) {
+        PORTB.OUTSET = PIN6_bm;
+        //USRP.temperature.STATUS |= 1<<0;
+    }
+    else {
+        PORTB.OUTCLR = PIN6_bm;
+        //USRP.temperature.STATUS &= ~(1<<0);
+    }
+}
+
+void checkExtVolt(void) {
+    if (USRP.externalVoltage.voltage > USRP.externalVoltage.higherLimit) {
+        PORTB.OUTSET = PIN7_bm;
+        //USRP.temperature.STATUS |= 1<<0;
+    }
+    else {
+        PORTB.OUTCLR = PIN7_bm;
+        //USRP.temperature.STATUS &= ~(1<<0);
+    }
 }
