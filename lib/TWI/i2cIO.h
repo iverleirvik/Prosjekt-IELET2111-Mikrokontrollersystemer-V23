@@ -24,12 +24,15 @@ extern "C" {
         float temperature; //4
         float lowerLimit; //4
         float higherLimit; //4
+        uint8_t STATUS;
 
         //12
     };
 
     struct __attribute__((packed)) voltage_t {
         uint16_t voltage; //2
+        uint16_t higherLimit;
+        uint16_t lowerLimit;
 
         //2
     };
