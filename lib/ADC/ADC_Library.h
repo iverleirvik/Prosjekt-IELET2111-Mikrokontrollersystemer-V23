@@ -1,6 +1,8 @@
 #ifndef ADC_h
 #define ADC_h
 
+#include "TWI/i2cIO.h"
+
 #include <avr/interrupt.h>
 #include <avr/io.h>
 #include <stdint.h>
