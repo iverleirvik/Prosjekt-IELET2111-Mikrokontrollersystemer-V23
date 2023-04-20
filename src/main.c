@@ -40,6 +40,7 @@ CLKCTRL_init();
 }
 
 void ledInit(void) {
+    PORTB.DIRSET = PIN4_bm;
     PORTB.DIRSET = PIN5_bm;
     PORTB.DIRSET = PIN6_bm;
     PORTB.DIRSET = PIN7_bm;
@@ -75,5 +76,14 @@ void checkExtVolt(void) {
     else {
         PORTB.OUTCLR = PIN7_bm;
         //USRP.temperature.STATUS &= ~(1<<0);
+    }
+}
+
+void checkFans(void) {
+    if(USRP.leftFan.STATUS & 1<<0) {
+        PORTB.OUTSET = PIN4_bm;
+    }
+    else {
+        PORTB.OUTCLR = PIN4_bm;
     }
 }
