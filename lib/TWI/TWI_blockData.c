@@ -6,12 +6,12 @@
 
 
 
-static volatile uint16_t i2c_index = 0;
+static volatile uint32_t i2c_index = 0;
 
 static volatile uint8_t* viritualMemory = 0;
 static volatile uint8_t viritualMemorySize = 0;
 
-void _TWI_SetAdressPointer(uint16_t adress) {
+void _TWI_SetAdressPointer(uint32_t adress) {
     if (adress < viritualMemorySize)
         i2c_index = adress;
 }

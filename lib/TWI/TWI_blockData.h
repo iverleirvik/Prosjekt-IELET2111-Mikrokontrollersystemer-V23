@@ -50,7 +50,7 @@ extern "C" {
 
 
     /* set the pointer adress*/
-    void _TWI_SetAdressPointer(uint16_t adress);
+    void _TWI_SetAdressPointer(uint32_t adress);
 
     /**
      * <b><FONT COLOR=BLUE>void</FONT> _TWI_StoreByte(<FONT COLOR=BLUE>uint8_t</FONT> data)</B>

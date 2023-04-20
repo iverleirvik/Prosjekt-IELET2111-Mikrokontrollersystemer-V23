@@ -31,21 +31,6 @@ void usrpEepromInit() {
     USRP_EEPROM_READ_word(USRP.selfVoltage.higherLimit);
     USRP_EEPROM_READ_word(USRP.selfVoltage.lowerLimit);
 
-
-
-    /*
-    
-    USRP.leftFan.lowerLimit = eeprom_read_word(&EEPROM_USRP.leftFan.lowerLimit);
-    USRP.leftFan.pulsesPerRotation = eeprom_read_word(&EEPROM_USRP.leftFan.pulsesPerRotation);
-
-    USRP.rightFan.higherLimit = eeprom_read_word(&EEPROM_USRP.rightFan.higherLimit);
-    USRP.rightFan.lowerLimit = eeprom_read_word(&EEPROM_USRP.rightFan.lowerLimit);
-    USRP.rightFan.pulsesPerRotation = eeprom_read_word(&EEPROM_USRP.rightFan.pulsesPerRotation);
-
-
-    USRP.temperature.higherLimit = eeprom_read_float(&EEPROM_USRP.temperature.higherLimit);
-    USRP.temperature.lowerLimit = eeprom_read_float(&EEPROM_USRP.temperature.lowerLimit);
-     */
 }
 
 void usrpEepromUpdate() {
@@ -65,16 +50,5 @@ void usrpEepromUpdate() {
 
     USRP_EEPROM_UPDATE_word(USRP.selfVoltage.higherLimit);
     USRP_EEPROM_UPDATE_word(USRP.selfVoltage.lowerLimit);
-    /*
-    eeprom_update_word(&EEPROM_USRP.leftFan.higherLimit, USRP.leftFan.higherLimit);
-    eeprom_update_word(&EEPROM_USRP.leftFan.lowerLimit, USRP.leftFan.lowerLimit);
-    eeprom_update_word(&EEPROM_USRP.leftFan.pulsesPerRotation, USRP.leftFan.pulsesPerRotation);
 
-    eeprom_update_word(&EEPROM_USRP.rightFan.higherLimit, USRP.rightFan.higherLimit);
-    eeprom_update_word(&EEPROM_USRP.rightFan.lowerLimit, USRP.rightFan.lowerLimit);
-    eeprom_update_word(&EEPROM_USRP.rightFan.pulsesPerRotation, USRP.rightFan.pulsesPerRotation);
-
-    eeprom_update_float(&EEPROM_USRP.temperature.higherLimit, USRP.temperature.higherLimit);
-    eeprom_update_float(&EEPROM_USRP.temperature.lowerLimit, USRP.temperature.lowerLimit);
-     */
 }

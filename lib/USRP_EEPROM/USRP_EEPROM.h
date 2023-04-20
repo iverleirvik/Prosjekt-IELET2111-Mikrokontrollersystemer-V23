@@ -56,6 +56,7 @@ extern "C" {
 
     //read from eeprom and put inn _dataMap
     void usrpEepromInit();
+    // update eeprom from _dataMap if value has changed
     void usrpEepromUpdate();
 #ifdef	__cplusplus
 }

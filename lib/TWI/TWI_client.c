@@ -14,7 +14,7 @@ static void (*AdressUpdateHandler) (uint16_t);
 volatile int tst = 0;
 volatile int8_t partOfAdress;
 const uint8_t ardessByteSize = 1;
-static volatile uint16_t adress = 0;
+static volatile uint32_t adress = 0;
 
 void TWI_initClient(uint8_t address) {
     //Init Function Pointers to Null
@@ -56,9 +56,9 @@ void __interrupt(TWI0_TWIS_vect_num) TWI0_ISR(void) {
 
             //Data Write (Host -> Client)
             TWI_data = TWI0.SDATA;
-            //treat first bytes as adress.
+            //treat first n bytes as adress. current implementation is 1 byte.
             if (partOfAdress < ardessByteSize) {
-                adress |= (uint16_t) TWI_data << (partOfAdress * 8);
+                adress |= (uint32_t) TWI_data << (partOfAdress * 8);
                 partOfAdress++;
             } else if ((partOfAdress == ardessByteSize) && (AdressUpdateHandler)) {
                 AdressUpdateHandler(adress);
