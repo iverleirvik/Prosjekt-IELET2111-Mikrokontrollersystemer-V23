@@ -3,7 +3,7 @@
 #include "AC.h"
 
 
-void AC0Init(void) {
+void ACLeftInit(void) { //left
     // set to output and add internal pullup.
     PORTB.PIN2CTRL = PORT_PULLUPEN_bm;
     PORTB.DIR = PIN0_bm;
@@ -16,7 +16,7 @@ void AC0Init(void) {
     EVSYS.USERTCA0CNTA |= EVSYS_USER_CHANNEL0_gc;
     AC0.DACREF = 1; //
 }
-void AC1Init(void) {
+void ACRightInit(void) { //right
     // set to output and add internal pullup.
     PORTB.PIN2CTRL = PORT_PULLUPEN_bm;
     PORTB.DIR = PIN0_bm;
@@ -30,7 +30,7 @@ void AC1Init(void) {
     AC1.DACREF = 1; //
 }
 
-void TCA0Init(uint16_t per) {
+void TCALeftInit(uint16_t per) {
     //
     TCA0.SINGLE.CTRLB |= TCA_SINGLE_WGMODE_NORMAL_gc | TCA_SINGLE_CMP0EN_bm;
     //set to use event-system for counting.
@@ -39,7 +39,7 @@ void TCA0Init(uint16_t per) {
     TCA0.SINGLE.CTRLA |= TCA_SINGLE_ENABLE_bm;
 }
 
-void TCA1Init(uint16_t per) {
+void TCARightInit(uint16_t per) {
     //
     TCA1.SINGLE.CTRLB |= TCA_SINGLE_WGMODE_NORMAL_gc | TCA_SINGLE_CMP0EN_bm;
     //set to use event-system for counting.

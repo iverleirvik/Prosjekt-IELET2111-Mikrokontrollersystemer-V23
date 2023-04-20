@@ -9,12 +9,12 @@
 #include <util/delay.h>
 
 //initialize AC0 to pin PD2
-void AC0Init(void) ;
+void ACLeftInit(void) ;
 // initialize TCA0 and set perod.
-void TCA0Init(uint16_t per) ;
+void TCALeftInit(uint16_t per) ;
 
 //initialize AC0 to pin PD3
-void AC1Init(void);
+void ACRightInit(void);
 // initialize TCA0 and set perod.
-void TCA1Init(uint16_t per) ;
+void TCARightInit(uint16_t per) ;
 #endif

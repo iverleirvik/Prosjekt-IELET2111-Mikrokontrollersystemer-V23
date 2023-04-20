@@ -2,10 +2,12 @@
 
 #include "i2cIO.h"
 #include "EEPROM.h"
-
+#include "TWI_blockData.h"
+#include "AC.h"
 
 #define F_CPU 4000000UL
 
+const uint8_t DATA_SIZE = sizeof (_dataMap);
 
 int main(void)  {
 CLKCTRL_init();
@@ -14,11 +16,15 @@ CLKCTRL_init();
     TWI_initPins();
     //Setup TWI Interface
     TWI_initClient(0x40);
+    ACLeftInit();
+    ACRightInit();
+    //set to arbitrary number higher than expected pulses per second
+    TCALeftInit(60000); 
+    TCARightInit(60000);
 
 
 
-
-    Initialize Memory to 0x00
+    //Initialize Memory to 0x00
     for (uint8_t i = 0; i < DATA_SIZE; i++) {
         _dataMap.TWI[i] = 0x00;
     }
@@ -34,7 +40,7 @@ CLKCTRL_init();
     uint16_t * fanLimit;
   
     while(1) {
-
+        usrpEepromUpdate();
         
 
     }
