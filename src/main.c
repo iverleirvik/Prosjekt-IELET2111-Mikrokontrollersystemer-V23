@@ -22,9 +22,10 @@ CLKCTRL_init();
         _dataMap.TWI[i] = 0x00;
     }
     usrpEepromInit();
-    //Attach i2x/TWI viritual memory.
+    //Attach i2c/TWI viritual memory.
     ViritualMemoryInit(_dataMap.TWI, DATA_SIZE);
 
+    //assign handlers for i2c/TWI
     TWI_assignByteWriteHandler(&_TWI_StoreByte);
     TWI_assignByteReadHandler(&_TWI_RequestByte);
     TWI_assignStopHandler(&_onTWIStop);
