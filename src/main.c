@@ -7,7 +7,28 @@
 
 
 int main(void)  {
+CLKCTRL_init();
 
+    //Setup TWI I/O
+    TWI_initPins();
+    //Setup TWI Interface
+    TWI_initClient(0x40);
+
+
+
+
+    Initialize Memory to 0x00
+    for (uint8_t i = 0; i < DATA_SIZE; i++) {
+        _dataMap.TWI[i] = 0x00;
+    }
+    usrpEepromInit();
+    //Attach i2x/TWI viritual memory.
+    ViritualMemoryInit(_dataMap.TWI, DATA_SIZE);
+
+    TWI_assignByteWriteHandler(&_TWI_StoreByte);
+    TWI_assignByteReadHandler(&_TWI_RequestByte);
+    TWI_assignStopHandler(&_onTWIStop);
+    TWI_assignadressHandler(&_TWI_SetAdressPointer);
     uint16_t * fanLimit;
   
     while(1) {

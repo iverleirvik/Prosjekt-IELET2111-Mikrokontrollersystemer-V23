@@ -58,10 +58,12 @@ void __interrupt(TWI0_TWIS_vect_num) TWI0_ISR(void) {
             TWI_data = TWI0.SDATA;
             //treat first n bytes as adress. current implementation is 1 byte.
             if (partOfAdress < ardessByteSize) {
+                //build the adress from LSB to MSB.
                 adress |= (uint32_t) TWI_data << (partOfAdress * 8);
                 partOfAdress++;
             } else if ((partOfAdress == ardessByteSize) && (AdressUpdateHandler)) {
                 AdressUpdateHandler(adress);
+                partOfAdress++;
                 if (writeHandler) {
                     writeHandler(TWI_data);
                 }
@@ -82,13 +84,14 @@ void __interrupt(TWI0_TWIS_vect_num) TWI0_ISR(void) {
 
     if (TWI0.SSTATUS & TWI_APIF_bm) {
         //Address Match or STOP
-
+            //reset on each new request.
+            adress = 0;
+            partOfAdress = 0;
         if (TWI0.SSTATUS & TWI_AP_ADR_gc) {
             //Address Match
             TWI0.SCTRLB = TWI_ACKACT_ACK_gc | TWI_SCMD_RESPONSE_gc;
-            adress = 0;
+
         } else {
-            partOfAdress = 0;
             //STOP Condition
             if (stopHandler) {
                 stopHandler();
