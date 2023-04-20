@@ -5,21 +5,7 @@
  * Author : Erlend
  */ 
 
-#ifndef ADC_h
-#define ADC_h
-
 #include "ADC_Library.h"
-#include "TWI/i2cIO.h"
-/* RTC Period */
-#define RTC_PERIOD (511)
-
-#include <avr/interrupt.h>
-#include <avr/io.h>
-#include <stdint.h>
-#include <math.h>
-
-int state;
-
 
 void ADC_init(char channel)
 {
@@ -114,5 +100,3 @@ float adcRun(int state){
 	}
 	
 }
-
-#endif
