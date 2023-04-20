@@ -1,6 +1,7 @@
 #include <avr/io.h>
 
-#include "TWI/i2cIO.h"
+#include "i2cIO.h"
+#include "EEPROM.h"
 
 
 #define F_CPU 4000000UL
