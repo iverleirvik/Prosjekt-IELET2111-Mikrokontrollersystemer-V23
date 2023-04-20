@@ -2,6 +2,8 @@
 #include <avr/eeprom.h>
 #include "USRP_EEPROM.h"
 #include "i2cIO.h"
+
+
 #define USRP_EEPROM_READ_word(x)  x =eeprom_read_word(&EEPROM_##x)
 #define USRP_EEPROM_READ_float(x)  x =eeprom_read_float(&EEPROM_##x)
 
@@ -19,6 +21,13 @@ void usrpEepromInit() {
 
     USRP_EEPROM_READ_float(USRP.temperature.higherLimit);
     USRP_EEPROM_READ_float(USRP.temperature.lowerLimit);
+
+
+    USRP_EEPROM_READ_word(USRP.externalVoltage.higherLimit);
+    USRP_EEPROM_READ_word(USRP.externalVoltage.lowerLimit);
+
+    USRP_EEPROM_READ_word(USRP.selfVoltage.higherLimit);
+    USRP_EEPROM_READ_word(USRP.selfVoltage.lowerLimit);
 
 
 
@@ -49,7 +58,11 @@ void usrpEepromUpdate() {
     USRP_EEPROM_UPDATE_float(USRP.temperature.higherLimit);
     USRP_EEPROM_UPDATE_float(USRP.temperature.lowerLimit);
 
+    USRP_EEPROM_UPDATE_word(USRP.externalVoltage.higherLimit);
+    USRP_EEPROM_UPDATE_word(USRP.externalVoltage.lowerLimit);
 
+    USRP_EEPROM_UPDATE_word(USRP.selfVoltage.higherLimit);
+    USRP_EEPROM_UPDATE_word(USRP.selfVoltage.lowerLimit);
     /*
     eeprom_update_word(&EEPROM_USRP.leftFan.higherLimit, USRP.leftFan.higherLimit);
     eeprom_update_word(&EEPROM_USRP.leftFan.lowerLimit, USRP.leftFan.lowerLimit);
