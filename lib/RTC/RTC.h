@@ -5,11 +5,9 @@
 #include <avr/interrupt.h>
 #include "TWI/i2cIO.h"
 
-uint16_t *FanTiming;
+uint16_t volotile fanTiming = 0;
 
-RTC_init(uint16_t *_fantiming) {
-	
-	fanTiming = _fantiming;
+RTC_init(void) {
 	
 	RTC.CTRLA |= RTC_RTCEN_bm | RTC_PRESCALER_DIV1024_gc;
 	RTC.INTCTRL |= RTC_OVF_bm;
@@ -28,14 +26,25 @@ ISR(RTC_CNT_vect)	{
 	if(RTC.INTFLAGS & RTC_OVF_bm)	{
 			/* Kjør kode */
 			
-			USRP.leftFan.reserved4 = posFlankToRPM(TCA0.SINGLE.CNT);
+			USRP.leftFan.rotationsPerMinute = posFlankToRPM(TCA0.SINGLE.CNT);
 			TCA0.SINGLE.CNT	= 0;
 		
-			USRP.rightFan.reserved3 = posFlankToRPM(TCA1.SINGLE.CNT);
+			USRP.rightFan.rotationsPerMinute = posFlankToRPM(TCA1.SINGLE.CNT);
 			TCA1.SINGLE.CNT	= 0;
 		
-			*fanTiming++;
-		
+			if(USRP.leftFan.rotationsPerMinute < USRP.leftFan.lowerLimit && USRP.rightFan.rotationsPerMinute < USRP.rightFan.lowerLimit) {
+				fanTiming++;
+				if (fanTiming > 30){
+					USRP.leftFan.STATUS |= 1<<0;
+					USRP.rightFan.STATUS |= 1<<0;
+				}
+				
+			}
+			else if(fanTiming != 0){
+				fanTiming = 0;
+				USRP.leftFan.STATUS &= ~(1<<0);
+				USRP.rightFan.STATUS &= ~(1<<0);
+			}
 	}
 		
 	RTC.INTFLAGS |= RTC_OVF_bm;

@@ -44,6 +44,7 @@ extern "C" {
         uint8_t pulsesPerRotation; //1
         uint16_t lowerLimit; //2
         uint16_t higherLimit; //2
+        uint8_t STATUS;
 
         //7
     };
