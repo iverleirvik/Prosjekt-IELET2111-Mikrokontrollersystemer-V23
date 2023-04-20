@@ -7,8 +7,9 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
+#ifndef USRP
 #define USRP _dataMap.avr
-
+#endif
     struct __attribute__((packed)) EEPROM_system_t {
 
     };
@@ -21,7 +22,8 @@ extern "C" {
     };
 
     struct __attribute__((packed)) EEPROM_voltage_t {
-
+        uint16_t higherLimit;
+        uint16_t lowerLimit;
         //2
     };
 
@@ -38,9 +40,9 @@ extern "C" {
 
         struct EEPROM_temperature_t temperature; //12
 
-        //struct EEPROM_voltage_t selfVoltage; //2
+        struct EEPROM_voltage_t selfVoltage; //2
 
-        //struct EEPROM_voltage_t externalVoltage;
+        struct EEPROM_voltage_t externalVoltage;
 
         struct EEPROM_fanspeed_t leftFan; //7
 

@@ -12,7 +12,9 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
+#ifndef USRP
 #define USRP _dataMap.avr
+#endif
 
     struct __attribute__((packed)) system_t {
         uint16_t version; //2
