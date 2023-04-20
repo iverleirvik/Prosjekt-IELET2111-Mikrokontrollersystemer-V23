@@ -3,7 +3,7 @@
 #include "USRP_EEPROM.h"
 #include "i2cIO.h"
 
-
+//macro for easy definition of eeprom mapping.
 #define USRP_EEPROM_READ_word(x)  x =eeprom_read_word(&EEPROM_##x)
 #define USRP_EEPROM_READ_float(x)  x =eeprom_read_float(&EEPROM_##x)
 
@@ -11,6 +11,8 @@
 #define USRP_EEPROM_UPDATE_float(x)  eeprom_update_float(&EEPROM_##x,x)
 
 void usrpEepromInit() {
+    //macro expands USRP_EEPROM_READ_word(USRP.leftFan.higherLimit) to:
+    //USRP.leftFan.higherLimit = eeprom_read_word(&EEPROM_USRP.leftFan.higherLimit)
     USRP_EEPROM_READ_word(USRP.leftFan.higherLimit);
     USRP_EEPROM_READ_word(USRP.leftFan.lowerLimit);
     USRP_EEPROM_READ_word(USRP.leftFan.pulsesPerRotation);
@@ -32,7 +34,7 @@ void usrpEepromInit() {
 
 
     /*
-    USRP.leftFan.higherLimit = eeprom_read_word(&EEPROM_USRP.leftFan.higherLimit);
+    
     USRP.leftFan.lowerLimit = eeprom_read_word(&EEPROM_USRP.leftFan.lowerLimit);
     USRP.leftFan.pulsesPerRotation = eeprom_read_word(&EEPROM_USRP.leftFan.pulsesPerRotation);
 
