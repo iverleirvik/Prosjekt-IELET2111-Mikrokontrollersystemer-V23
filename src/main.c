@@ -4,6 +4,7 @@
 #include "EEPROM.h"
 #include "TWI_blockData.h"
 #include "AC.h"
+#include "RTC.h"
 
 #define F_CPU 4000000UL
 
