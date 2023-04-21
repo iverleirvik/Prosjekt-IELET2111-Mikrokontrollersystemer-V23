@@ -8,9 +8,11 @@
 #include <stdint.h>
 #include <math.h>
 
-void ADC0_init(char channel);
+uint8_t state = 0;
+
+void ADC0_init(void);
 uint16_t ADC0_read(void);
-float adcRun(int state);
+float adcRun(void);
 float spenningEkstern(uint8_t adcVal);
 float spenningMCU(uint8_t adcVal);
 float temp(float adcVal);

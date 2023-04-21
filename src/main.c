@@ -5,13 +5,15 @@
 #include "TWI_blockData.h"
 #include "AC.h"
 #include "RTC.h"
+#include "TWI_client.h"
+#include "ADC_Library.h"
+#include "check.h"
 
 #define F_CPU 4000000UL
 
 const uint8_t DATA_SIZE = sizeof (_dataMap);
 
 int main(void)  {
-CLKCTRL_init();
 
     /* RTC */
     RTC_init();
@@ -25,7 +27,11 @@ CLKCTRL_init();
     TCALeftInit(60000); 
     TCARightInit(60000);
 
+    //Initialize ADC
+    ADC_init();
 
+    //Initialize LEDs
+    ledInit();
 
     //Initialize Memory to 0x00
     for (uint8_t i = 0; i < DATA_SIZE; i++) {
@@ -44,7 +50,8 @@ CLKCTRL_init();
   
     while(1) {
         usrpEepromUpdate();
-        
+        adcRun();
+        check();
 
     }
 
@@ -57,44 +64,3 @@ void ledInit(void) {
     PORTB.DIRSET = PIN7_bm;
 }
 
-void checkTemp(void) {
-    if (USRP.temperature.temperature > USRP.temperature.higherLimit) {
-        PORTB.OUTSET = PIN5_bm;
-        USRP.temperature.STATUS |= 1<<0;
-    }
-    else {
-        PORTB.OUTCLR = PIN5_bm;
-        USRP.temperature.STATUS &= ~(1<<0);
-    }
-}
-
-void checkSelfVolt(void) {
-    if (USRP.selfVoltage.voltage > USRP.selfVoltage.higherLimit) {
-        PORTB.OUTSET = PIN6_bm;
-        //USRP.temperature.STATUS |= 1<<0;
-    }
-    else {
-        PORTB.OUTCLR = PIN6_bm;
-        //USRP.temperature.STATUS &= ~(1<<0);
-    }
-}
-
-void checkExtVolt(void) {
-    if (USRP.externalVoltage.voltage > USRP.externalVoltage.higherLimit) {
-        PORTB.OUTSET = PIN7_bm;
-        //USRP.temperature.STATUS |= 1<<0;
-    }
-    else {
-        PORTB.OUTCLR = PIN7_bm;
-        //USRP.temperature.STATUS &= ~(1<<0);
-    }
-}
-
-void checkFans(void) {
-    if(USRP.leftFan.STATUS & 1<<0) {
-        PORTB.OUTSET = PIN4_bm;
-    }
-    else {
-        PORTB.OUTCLR = PIN4_bm;
-    }
-}

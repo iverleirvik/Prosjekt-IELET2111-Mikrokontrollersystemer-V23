@@ -7,7 +7,7 @@
 
 #include "ADC_Library.h"
 
-void ADC_init(char channel)
+void ADC_init(void)
 {
 	/* Disable digital input buffer */
 	PORTD.PIN6CTRL &= ~PORT_ISC_gm;
@@ -21,9 +21,7 @@ void ADC_init(char channel)
 	
 	ADC0.CTRLA = ADC_ENABLE_bm /* ADC Enable: enabled */
 	| ADC_RESSEL_10BIT_gc; /* 10-bit mode */
-	
-	/* Select ADC channel */
-	ADC0.MUXPOS = channel;
+
 }
 uint16_t ADC0_read(void)
 {
@@ -68,7 +66,7 @@ float spenningEkstern(uint8_t adcVal){
 	return V_in;
 }
 
-float adcRun(int state){
+float adcRun(void){
 	
 	switch(state){
 		
