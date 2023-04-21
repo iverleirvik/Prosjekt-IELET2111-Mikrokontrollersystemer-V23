@@ -49,23 +49,29 @@ extern "C" {
 #define FIRST_BYTE_ADDR
 
 
-    /* set the pointer adress*/
+        /**
+     * <b><FONT COLOR=BLUE>void</FONT> _TWI_SetAdressPointer(<FONT COLOR=BLUE>uint8_t</FONT> data)</B>
+     * @param uint32_t adress - set the pointer adress.
+     * 
+     * this function sets the pointer adress in viritual memory
+     * 
+     */
     void _TWI_SetAdressPointer(uint32_t adress);
 
     /**
      * <b><FONT COLOR=BLUE>void</FONT> _TWI_StoreByte(<FONT COLOR=BLUE>uint8_t</FONT> data)</B>
-     * @param uint8_t data - Byte of data received by the MSSP module
+     * @param uint8_t data - Byte of data to be stored in the viritual memory.
      * 
-     * This function stores a byte of data into the "write" buffer associated.
-     * If the index internally exceeds the write buffer size, then the data is discarded.
+     * this function store the byte at the current pointeradress. increment pointeradress by one.
+     * 
      */
     void _TWI_StoreByte(uint8_t data);
 
     /**
      * <b><FONT COLOR=BLUE>uint8_t</FONT> _TWI_RequestByte(<FONT COLOR=BLUE>void</FONT>)</B>
      * 
-     * This function returns a byte of data from the "read" buffer at the internal index.
-     * If the index internally exceeds the read buffer size, then a default value (0x00) is returned.
+     * this function read the byte at the current pointeradress. increment pointeradress by one.
+     * 
      */
     uint8_t _TWI_RequestByte(void);
 
@@ -78,22 +84,15 @@ extern "C" {
     void _onTWIStop(void);
 
     /**
-     * <b><FONT COLOR=BLUE>void</FONT> setupReadBuffer(<FONT COLOR=BLUE>uint8_t*</FONT> buffer, <FONT COLOR=BLUE>uint8_t</FONT> size)</B>
-     * @param buffer (uint8_t*) - Buffer to read data from
-     * @param size (uint8_t) - Length of the string to send.
+     * <b><FONT COLOR=BLUE>void</FONT> ViritualMemoryInit(<FONT COLOR=BLUE>uint8_t*</FONT> buffer, <FONT COLOR=BLUE>uint8_t</FONT> size)</B>
+     * @param buffer (uint8_t*) - location of the viritual memory.
+     * @param size (uint8_t) - size of the viritual memory.
      * 
      * Assigns the buffer of memory to read data from.
      */
     void ViritualMemoryInit(volatile uint8_t* buffer, uint8_t size);
 
-    /**
-     * <b><FONT COLOR=BLUE>void</FONT> setupWriteBuffer(<FONT COLOR=BLUE>uint8_t*</FONT> buffer, <FONT COLOR=BLUE>uint8_t</FONT> size)</B>
-     * @param buffer (uint8_t*) - Buffer to write data to
-     * @param size (uint8_t) - Length of the string to send.
-     * 
-     * Assigns the buffer of memory to write data to.
-     */
-    void setupWriteBuffer(volatile uint8_t* buffer, uint8_t size);
+
 
 #ifdef	__cplusplus
 }

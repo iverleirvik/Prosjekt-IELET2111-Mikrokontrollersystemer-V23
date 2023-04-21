@@ -6,23 +6,24 @@
 
 
 
-static volatile uint32_t i2c_index = 0;
+static volatile uint32_t addressPointer = 0;
 
 static volatile uint8_t* viritualMemory = 0;
 static volatile uint8_t viritualMemorySize = 0;
 
 void _TWI_SetAdressPointer(uint32_t adress) {
     if (adress < viritualMemorySize)
-        i2c_index = adress;
+        
+        addressPointer= adress;
 }
 
 void _TWI_StoreByte(uint8_t _TWI_data) {
     //wrap around
-    if (i2c_index >= viritualMemorySize) {
-        i2c_index = 0;
+    if (addressPointer >= viritualMemorySize) {
+        addressPointer = 0;
     }
-    viritualMemory[i2c_index] = _TWI_data;
-    i2c_index++;
+    viritualMemory[addressPointer] = _TWI_data;
+    addressPointer++;
     //PORTC.OUTTGL = PIN0_bm;
 
 
@@ -31,11 +32,11 @@ void _TWI_StoreByte(uint8_t _TWI_data) {
 uint8_t _TWI_RequestByte(void) {
     //
     uint8_t data = 0x00;
-    if (i2c_index >= viritualMemorySize) {
-        i2c_index = 0;
+    if (addressPointer >= viritualMemorySize) {
+        addressPointer = 0;
     }
-    data = viritualMemory[i2c_index];
-    i2c_index++;
+    data = viritualMemory[addressPointer];
+    addressPointer++;
     return data;
 }
 

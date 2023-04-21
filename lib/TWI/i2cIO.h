@@ -19,7 +19,7 @@ extern "C" {
     struct __attribute__((packed)) system_t {
         uint16_t version; //2
         uint16_t id; //2
-        //4
+        uint8_t reserved0[12];
     };
 
     struct __attribute__((packed)) temperature_t {
@@ -27,16 +27,14 @@ extern "C" {
         float lowerLimit; //4
         float higherLimit; //4
         uint8_t STATUS;
-
-        //12
+        uint8_t reserved0[3];
     };
 
     struct __attribute__((packed)) voltage_t {
         uint16_t voltage; //2
-        uint16_t higherLimit;
         uint16_t lowerLimit;
-
-        //2
+        uint16_t higherLimit;
+        uint8_t reserved0[10];
     };
 
     struct __attribute__((packed)) fanspeed_t {
@@ -45,8 +43,7 @@ extern "C" {
         uint16_t lowerLimit; //2
         uint16_t higherLimit; //2
         uint8_t STATUS;
-
-        //7
+        uint8_t reserved0[8];
     };
 
     struct __attribute__((packed)) memMapStruct {
@@ -70,7 +67,7 @@ extern "C" {
 
     };
     // has an alias as USRP instead of _dataMap.avr.
-
+    // this is treated as a global variable.
     volatile union memMap {
         struct memMapStruct avr;
         uint8_t TWI[255];
