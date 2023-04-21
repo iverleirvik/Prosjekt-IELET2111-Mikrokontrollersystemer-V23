@@ -31,7 +31,7 @@ extern "C" {
     };
 
     struct __attribute__((packed)) voltage_t {
-        uint16_t voltage; //2
+        float voltage; //2
         uint16_t lowerLimit;
         uint16_t higherLimit;
         uint8_t reserved0[10];

@@ -6,7 +6,9 @@
  */ 
 
 #include "ADC_Library.h"
-uint8_t muxState=0;
+
+int state = 0;
+
 void ADC_init(void)
 {
 	/* Disable digital input buffer */
@@ -52,37 +54,37 @@ float temp(float adcVal){
 	return T;
 }
 
-float spenningMCU(uint8_t adcVal){
+float spenningMCU(uint16_t adcVal){
 	
-	float V_in = adcVal * (3.3/1023.0) * 2;		// 2 fordi spenningsdeler gir (10k+10k)/10k = 2
-	
-	return V_in;
-}
-
-float spenningEkstern(uint8_t adcVal){
-	
-	float V_in = adcVal * (3.3/1023.0) * 2;		// Må finne motstandsverdier
+	float V_in = (float)(adcVal * 3.3* 2.0)/1023.0 ;		// 2 fordi spenningsdeler gir (10k+10k)/10k = 2
 	
 	return V_in;
 }
 
-float adcRun(void){
+float spenningEkstern(uint16_t adcVal){
 	
-	switch(muxState){
+	float V_in = adcVal * (3.3/1023.0) * (1.0/6.6);		// Må finne motstandsverdier
+	
+	return V_in;
+}
+
+void adcRun(void){
+	
+	switch(state){
 		
 		case 0:		// Intern spenning
 		default:	
 			ADC0.MUXPOS = ADC_MUXPOS_AIN5_gc;
 			ADC0.MUXNEG = ADC_MUXNEG_GND_gc;
 			USRP.selfVoltage.voltage = spenningMCU(ADC0_read());
-			muxState = 1;
+			state = 1;
 			break;
 			
 		case 1:		// Temperatur
 		
 			ADC0.MUXPOS = ADC_MUXPOS_AIN6_gc;	
 			USRP.temperature.temperature = temp(ADC0_read());
-			muxState++;
+			state++;
 			break;
 			
 		case 2:		// Måling av ekstern spenning
@@ -90,7 +92,7 @@ float adcRun(void){
 			ADC0.MUXPOS = ADC_MUXPOS_AIN4_gc;
 			ADC0.MUXNEG = ADC_MUXNEG_AIN15_gc;
 			USRP.externalVoltage.voltage = spenningEkstern(ADC0_read());
-			muxState++;
+			state++;
 			break;
 		
 		break;

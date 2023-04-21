@@ -8,13 +8,13 @@
 #include <stdint.h>
 #include <math.h>
 
-
+//int state = 0;
 
 void ADC0_init(void);
 uint16_t ADC0_read(void);
-float adcRun(void);
-float spenningEkstern(uint8_t adcVal);
-float spenningMCU(uint8_t adcVal);
+void adcRun(void);
+float spenningEkstern(uint16_t adcVal);
+float spenningMCU(uint16_t adcVal);
 float temp(float adcVal);
 
 #endif

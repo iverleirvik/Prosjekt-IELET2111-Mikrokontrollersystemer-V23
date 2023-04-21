@@ -10,11 +10,11 @@
 static void (*writeHandler)(uint8_t);
 static uint8_t(*readHandler)(void);
 static void (*stopHandler)(void);
-static void (*AdressUpdateHandler) (uint16_t);
+static void (*AdressUpdateHandler) (uint32_t);
 volatile int tst = 0;
 volatile int8_t partOfAdress;
 const uint8_t ardessByteSize = 1;
-static volatile uint32_t adress = 0;
+volatile uint32_t TWI_pointer_ = 0;
 
 void TWI_initClient(uint8_t address) {
     //Init Function Pointers to Null
@@ -47,7 +47,7 @@ void TWI_initPins(void) {
     PORTA.PINCTRLUPD = PIN2_bm | PIN3_bm;
 }
 
-ISR(TWI0_TWIS_vect)  {
+ISR(TWI0_TWIS_vect) {
     if (TWI0.SSTATUS & TWI_DIF_bm) {
         //Data Interrupt Flag
         uint8_t TWI_data = 0x00;
@@ -59,10 +59,10 @@ ISR(TWI0_TWIS_vect)  {
             //treat first n bytes as adress. current implementation is 1 byte.
             if (partOfAdress < ardessByteSize) {
                 //build the adress from LSB to MSB.
-                adress |= (uint32_t) TWI_data << (partOfAdress * 8);
+                TWI_pointer_ |= (uint32_t) TWI_data << (partOfAdress * 8);
                 partOfAdress++;
             } else if ((partOfAdress == ardessByteSize) && (AdressUpdateHandler)) {
-                AdressUpdateHandler(adress);
+                AdressUpdateHandler(TWI_pointer_);
                 partOfAdress++;
                 if (writeHandler) {
                     writeHandler(TWI_data);
@@ -85,7 +85,7 @@ ISR(TWI0_TWIS_vect)  {
     if (TWI0.SSTATUS & TWI_APIF_bm) {
         //Address Match or STOP
             //reset on each new request.
-            adress = 0;
+            TWI_pointer_ = 0;
             partOfAdress = 0;
         if (TWI0.SSTATUS & TWI_AP_ADR_gc) {
             //Address Match
@@ -96,7 +96,7 @@ ISR(TWI0_TWIS_vect)  {
             if (stopHandler) {
                 stopHandler();
                 //update if only partial adress is sent. 
-                AdressUpdateHandler(adress);
+                AdressUpdateHandler(TWI_pointer_);
             }
 
             TWI0.SCTRLB = TWI_ACKACT_NACK_gc | TWI_SCMD_COMPTRANS_gc;

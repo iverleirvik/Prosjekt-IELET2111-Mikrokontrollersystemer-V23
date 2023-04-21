@@ -56,7 +56,7 @@ extern "C" {
      * this function sets the pointer adress in viritual memory
      * 
      */
-    void _TWI_SetAdressPointer(uint32_t adress);
+    void _TWI_SetAdressPointer(uint32_t _TWI_POINTER_adress);
 
     /**
      * <b><FONT COLOR=BLUE>void</FONT> _TWI_StoreByte(<FONT COLOR=BLUE>uint8_t</FONT> data)</B>
@@ -90,7 +90,7 @@ extern "C" {
      * 
      * Assigns the buffer of memory to read data from.
      */
-    void ViritualMemoryInit(volatile uint8_t* buffer, uint8_t size);
+    void ViritualMemoryInit(volatile uint8_t* buffer, uint16_t size);
 
 
 
