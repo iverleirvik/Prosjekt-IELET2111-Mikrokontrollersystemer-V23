@@ -3,9 +3,9 @@
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
-#include "TWI/i2cIO.h"
+#include "i2cIO.h"
 
-uint16_t volotile fanTiming = 0;
+uint16_t volatile fanTiming = 0;
 
 RTC_init(void) {
 	

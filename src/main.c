@@ -1,7 +1,7 @@
 #include <avr/io.h>
 
 #include "i2cIO.h"
-#include "EEPROM.h"
+#include "USRP_EEPROM.h"
 #include "TWI_blockData.h"
 #include "AC.h"
 #include "RTC.h"

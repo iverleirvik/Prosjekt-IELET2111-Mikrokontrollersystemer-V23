@@ -47,7 +47,7 @@ void TWI_initPins(void) {
     PORTA.PINCTRLUPD = PIN2_bm | PIN3_bm;
 }
 
-void __interrupt(TWI0_TWIS_vect_num) TWI0_ISR(void) {
+ISR(TWI0_TWIS_vect)  {
     if (TWI0.SSTATUS & TWI_DIF_bm) {
         //Data Interrupt Flag
         uint8_t TWI_data = 0x00;
