@@ -18,7 +18,6 @@ extern "C" {
         float lowerLimit; //4
         float higherLimit; //4 
 
-        //12
     };
 
     struct __attribute__((packed)) EEPROM_voltage_t {
@@ -51,7 +50,7 @@ extern "C" {
 
 
     }
-    EEMEM EEPROM_USRP;
+     EEMEM volatile EEPROM_USRP;
 
 
     //read from eeprom and put inn _dataMap

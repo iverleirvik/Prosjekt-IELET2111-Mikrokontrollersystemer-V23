@@ -1,0 +1,8 @@
+{
+    "cmake.configureOnOpen": false,
+    "files.associations": {
+        "usrp_eeprom.h": "c",
+        "eeprom.h": "c",
+        "atomic.h": "c"
+    }
+}

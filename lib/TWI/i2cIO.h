@@ -26,7 +26,7 @@ extern "C" {
         float temperature; //4
         float lowerLimit; //4
         float higherLimit; //4
-        uint8_t STATUS;
+        uint8_t STATUS;     //1
         uint8_t reserved0[3];
     };
 

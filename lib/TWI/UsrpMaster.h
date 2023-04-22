@@ -15,7 +15,7 @@
 #define USRP_TEMPERATURE_HIGHERLIMIT            0x18
 #define USRP_TEMPERATURE_HIGHERLIMIT_length     4
 #define USRP_TEMPERATURE_STATUS                 0x19
-#define USRP_TEMPERATURE_STATUS_length
+#define USRP_TEMPERATURE_STATUS_length          1
 
 
 #define USRP_SELFVOLTAGE_VOLTAGE                0x20
