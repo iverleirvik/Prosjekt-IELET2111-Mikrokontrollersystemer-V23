@@ -10,23 +10,23 @@ extern "C" {
 #ifndef USRP
 #define USRP _dataMap.avr
 #endif
-    struct __attribute__((packed)) EEPROM_system_t {
 
+    struct EEPROM_system_t {
     };
 
-    struct __attribute__((packed)) EEPROM_temperature_t {
+    struct EEPROM_temperature_t {
         float lowerLimit; //4
         float higherLimit; //4 
 
     };
 
-    struct __attribute__((packed)) EEPROM_voltage_t {
+    struct EEPROM_voltage_t {
         uint16_t higherLimit;
         uint16_t lowerLimit;
         //2
     };
 
-    struct __attribute__((packed)) EEPROM_fanspeed_t {
+    struct EEPROM_fanspeed_t {
         uint8_t pulsesPerRotation; //1
         uint16_t lowerLimit; //2
         uint16_t higherLimit; //2
@@ -34,7 +34,7 @@ extern "C" {
         //7
     };
 
-    struct __attribute__((packed)) EEPROM_memMapStruct {
+    struct EEPROM_memMapStruct {
         //struct EEPROM_system_t system; //4
 
         struct EEPROM_temperature_t temperature; //12
@@ -49,14 +49,16 @@ extern "C" {
 
 
 
-    }
-     EEMEM volatile EEPROM_USRP;
+    };
+    ;
 
 
     //read from eeprom and put inn _dataMap
     void usrpEepromInit();
     // update eeprom from _dataMap if value has changed
     void usrpEepromUpdate();
+
+
 #ifdef	__cplusplus
 }
 #endif

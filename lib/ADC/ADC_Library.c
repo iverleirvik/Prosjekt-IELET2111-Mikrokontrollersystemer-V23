@@ -31,10 +31,10 @@ uint16_t ADC0_read(void)
 	ADC0.COMMAND = ADC_STCONV_bm;
 	
 	/* Wait until ADC conversion done */
-	while ( !(ADC0.INTFLAGS & ADC_RESRDY_bm) )
+	/*while ( !(ADC0.INTFLAGS & ADC_RESRDY_bm) )
 	{
 		;
-	}
+	}*/
 	
 	/* Clear the interrupt flag by writing 1: */
 	ADC0.INTFLAGS = ADC_RESRDY_bm;
@@ -69,7 +69,7 @@ float spenningEkstern(uint16_t adcVal){
 }
 
 void adcRun(void){
-	
+	if (ADC0.INTFLAGS & ADC_RESRDY_bm){
 	switch(state){
 		
 		case 0:		// Intern spenning
@@ -97,6 +97,7 @@ void adcRun(void){
 		
 		break;
 		
+	}
 	}
 	
 }

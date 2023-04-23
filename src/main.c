@@ -2,10 +2,12 @@
 #define F_CPU 4000000UL
 #define USART3_BAUD_RATE(BAUD_RATE) ((float)(F_CPU * 64 / (16 * (float)BAUD_RATE)) + 0.5)
 
+
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <stdio.h>
-//#include <avr/eeprom.h>
+#include <util/delay.h>
+#include <avr/eeprom.h>
 
 #include "RTC.h"
 #include "ADC_Library.h"
@@ -26,15 +28,12 @@ int USART3_printChar(const char character, FILE *stream);
 FILE USART_stream = FDEV_SETUP_STREAM(USART3_printChar, NULL, _FDEV_SETUP_WRITE);
 
 int main(void)  {
-	
+	//PORTB.DIR|=PIN3_bm;
 	USART3_init();
-    brownOutInit();
+    brownOutInit();//mainly improtant for EEPROM.
     /* RTC */
     RTC_init();
-    //Setup TWI I/O
-    TWI_initPins(); //mainly improtant for EEPROM.
-    //Setup TWI Interface
-    TWI_initClient(0x40);
+    
     ACLeftInit();
     ACRightInit();
     //set to arbitrary number higher than expected pulses per second
@@ -46,12 +45,13 @@ int main(void)  {
 
     //Initialize LEDs
     ledInit();
-
+    
+  sei();
     //Initialize Memory to 0x00
     for (uint8_t i = 0; i < DATA_SIZE; i++) {
         _dataMap.TWI[i] = 0x00;
     }
-    
+    usrpEepromInit();
     //Attach i2c/TWI viritual memory.
     ViritualMemoryInit(&_dataMap.TWI, DATA_SIZE);
     
@@ -60,14 +60,21 @@ int main(void)  {
     TWI_assignByteReadHandler(&_TWI_RequestByte);
     TWI_assignStopHandler(&_onTWIStop);
     TWI_assignadressHandler(&_TWI_SetAdressPointer);
-    usrpEepromInit();
+    
+//Setup TWI I/O
+    TWI_initPins(); 
+    //Setup TWI Interface
+    TWI_initClient(0x40);
+
   
-  sei();
+
     while(1) {
+        //_delay_ms(100);
+        
         usrpEepromUpdate();
         adcRun();
         check();
-		//USRP.temperature.higherLimit = 27;
+		
 		//printf("Result: %f\n", USRP.temperature.temperature);
 
     }

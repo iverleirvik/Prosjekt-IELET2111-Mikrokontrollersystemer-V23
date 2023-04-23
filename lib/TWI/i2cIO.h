@@ -69,9 +69,9 @@ extern "C" {
     // has an alias as USRP instead of _dataMap.avr.
     // this is treated as a global variable.
     volatile union memMap {
-        struct memMapStruct avr;
-        uint8_t TWI[255];
-    } _dataMap;
+        volatile struct  memMapStruct avr;
+        volatile uint8_t  TWI[255];
+    } volatile _dataMap;
 
 
 

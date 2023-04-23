@@ -7,9 +7,9 @@
 #define TWI_READ true
 #define TWI_WRITE false
 
-static void (*writeHandler)(uint8_t);
-static uint8_t(*readHandler)(void);
-static void (*stopHandler)(void);
+static void (*writeHandler)(uint8_t) =0;
+static uint8_t(*readHandler)(void) =0;
+static void (*stopHandler)(void) =0;
 static void (*AdressUpdateHandler) (uint32_t);
 volatile int tst = 0;
 volatile int8_t partOfAdress;
@@ -18,9 +18,9 @@ volatile uint32_t TWI_pointer_ = 0;
 
 void TWI_initClient(uint8_t address) {
     //Init Function Pointers to Null
-    writeHandler = 0;
-    readHandler = 0;
-    stopHandler = 0;
+//    writeHandler = 0;
+//   readHandler = 0;
+//    stopHandler = 0;
 
     //Enable Operation in Debug
     TWI0.DBGCTRL = TWI_DBGRUN_bm;
