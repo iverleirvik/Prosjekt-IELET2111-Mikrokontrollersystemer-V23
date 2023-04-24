@@ -8,17 +8,17 @@
 #include <stdint.h>
 #include <math.h>
 
-
+// Initialize the ADC.
 void ADC0_init(void);
-//read value of adc. internal use only
+// Read value of ADC. Internal use only.
 uint16_t ADC0_read(void);
-// update valuse and start new measurments.
+// Update valuse and start new measurments.
 void adcRun(void);
-//convert from 10-bit adc measurment to external voltage.
+// Convert from 10-bit adc measurment to external voltage.
 float spenningEkstern(uint16_t adcVal);
-//convert form 10-bit adc measurment to internal voltage.
+// Convert form 10-bit adc measurment to internal voltage.
 float spenningMCU(uint16_t adcVal);
-//convert form 10-bit adc measurment to temperature.
+// Convert form 10-bit adc measurment to temperature.
 float temp(float adcVal);
 
 #endif

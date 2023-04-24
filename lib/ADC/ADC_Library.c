@@ -1,15 +1,8 @@
-/*
- * ADC_Lib_Prosjekt_Mikro.c
- *
- * Created: 18-Apr-23 3:33:31 PM
- * Author : Erlend
- */ 
-
 #include "ADC_Library.h"
 
-int state = 0;
+int state = 0; // Variable for controlling the input pin of the ADC.
 
- enum {
+ enum {	// Enum for switch case in ADCRun.
 	adcInternalVoltage=0,
 	adcTemperature,
 	adcExternalVoltage
@@ -38,10 +31,12 @@ uint16_t ADC0_read(void)
 }
 
 float temp(float adcVal){
-	
+
+	// Variables used within the bit-to-temperature conversion function. 
+	// Pay attention to the period added to every variable and constant.
 	float U_th, R_th, R_1 = 10000.0, U = 3.3, B = 3950.0, R_0 = 10000.0, T_0 = 298.0, T_inv, T;
 	
-	// calculate temperature using termistor.
+	// calculate temperature using thermistor.
 	U_th = adcVal * U/1023.0;
 	R_th = (R_1*U_th)/(U - U_th);
 	T_inv = (1.0/T_0) + ((1.0/B)*log(R_th/R_0));
@@ -52,7 +47,7 @@ float temp(float adcVal){
 
 float spenningMCU(uint16_t adcVal){
 	
-	float V_in = (float)(adcVal * 3.3* 2.0)/1023.0 ;		// 2. Since we are measuring over a symetric voltage divider
+	float V_in = (float)(adcVal * 3.3* 2.0)/1023.0 ; // 2. Since we are measuring over a symetric voltage divider
 	
 	return V_in;
 }
@@ -65,7 +60,7 @@ float spenningEkstern(uint16_t adcVal){
 }
 
 void adcRun(void){
-	if (ADC0.INTFLAGS & ADC_RESRDY_bm){
+	if (ADC0.INTFLAGS & ADC_RESRDY_bm){	// Making sure it is okay to read from thr ADC.
 	switch(state){
 		
 		case adcInternalVoltage:

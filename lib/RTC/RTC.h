@@ -1,10 +1,11 @@
 #ifndef RTC_h
 #define RTC_h
 
-#include <avr/io.h>
-#include <avr/interrupt.h>
 #include "i2cIO.h"
 #include "UsrpMaster.h"
+
+#include <avr/io.h>
+#include <avr/interrupt.h>
 
 uint16_t volatile fanTiming = 0;
 
