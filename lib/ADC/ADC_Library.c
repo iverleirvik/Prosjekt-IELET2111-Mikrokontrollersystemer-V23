@@ -41,9 +41,10 @@ uint16_t ADC0_read(void)
 
 float temp(float adcVal){
 	
+	// Variables used within the bit-to-temperature conversion function. 
+	// Pay attention to the period added to every variable and constant.
 	float U_th, R_th, R_1 = 10000.0, U = 3.3, B = 3950.0, R_0 = 10000.0, T_0 = 298.0, T_inv, T;
 	
-	// Beregner temperatur til termistor, T
 	U_th = adcVal * U/1023.0;
 	R_th = (R_1*U_th)/(U - U_th);
 	T_inv = (1.0/T_0) + ((1.0/B)*log(R_th/R_0));
@@ -54,7 +55,8 @@ float temp(float adcVal){
 
 float spenningMCU(uint8_t adcVal){
 	
-	float V_in = adcVal * (3.3/1023.0) * 2;		// 2 fordi spenningsdeler gir (10k+10k)/10k = 2
+	float V_in = adcVal * (3.3/1023.0) * 2;	// Multiplying with two because of 
+	// the voltage divider used in the hardware part of the measurement system.
 	
 	return V_in;
 }
