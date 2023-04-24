@@ -21,8 +21,8 @@ extern "C" {
     };
 
     struct EEPROM_voltage_t {
-        uint16_t higherLimit;
-        uint16_t lowerLimit;
+        float higherLimit;
+        float lowerLimit;
         //2
     };
 
@@ -55,7 +55,7 @@ extern "C" {
 
     //read from eeprom and put inn _dataMap
     void usrpEepromInit();
-    // update eeprom from _dataMap if value has changed
+    // update one eeprom from _dataMap if value has changed. call multiple times to update all.
     void usrpEepromUpdate();
 
 

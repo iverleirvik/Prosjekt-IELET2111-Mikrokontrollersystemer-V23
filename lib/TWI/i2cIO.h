@@ -17,30 +17,45 @@ extern "C" {
 #endif
 
     struct __attribute__((packed)) system_t {
+        //software version
         uint16_t version; //2
+        //device ID           
         uint16_t id; //2
         uint8_t reserved0[12];
     };
 
     struct __attribute__((packed)) temperature_t {
+        //measured temperature
         float temperature; //4
+        // lower alarm treshold
         float lowerLimit; //4
+        // higher alarm treshold
         float higherLimit; //4
+        // status
         uint8_t STATUS;     //1
         uint8_t reserved0[3];
     };
 
     struct __attribute__((packed)) voltage_t {
+        //measured voltage
         float voltage;                  //4
-        uint16_t lowerLimit;            //2
-        uint16_t higherLimit;           //2
-        uint8_t reserved0[8];  
+        //lower alarm treshold
+        float lowerLimit;               //4
+        //higher alarm treshold
+        float higherLimit;              //4
+        uint8_t STATUS;                 //1
+
+        uint8_t reserved0[3];  
     };
 
     struct __attribute__((packed)) fanspeed_t {
+        //measured rotation per minute
         uint16_t rotationsPerMinute;    //2
+        //translation factor between pulses and RPM
         uint8_t pulsesPerRotation;      //1
+        //lower alarm limit
         uint16_t lowerLimit;            //2
+        //higher alarm limit
         uint16_t higherLimit;           //2
         uint8_t STATUS;                 //1
         uint8_t reserved0[8];

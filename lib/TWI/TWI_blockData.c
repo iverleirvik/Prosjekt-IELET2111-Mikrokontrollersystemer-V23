@@ -18,13 +18,13 @@ void _TWI_SetAdressPointer(uint32_t _TWI_POINTER_adress) {
 }
 
 void _TWI_StoreByte(uint8_t _TWI_data) {
-    //wrap around
+    
     if (addressPointer >= viritualMemorySize) {
+        //wrap around
         addressPointer = 0;
     }
     viritualMemory[addressPointer] = _TWI_data;
     addressPointer++;
-    //PORTC.OUTTGL = PIN0_bm;
 
 
 }
@@ -41,8 +41,6 @@ uint8_t _TWI_RequestByte(void) {
 }
 
 void _onTWIStop(void) {
-    //togle pin for indication
-    PORTC.OUTTGL = PIN0_bm;
 }
 
 void ViritualMemoryInit(volatile uint8_t* buffer, uint16_t size) {

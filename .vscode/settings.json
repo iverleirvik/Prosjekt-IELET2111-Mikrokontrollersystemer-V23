@@ -3,6 +3,8 @@
     "files.associations": {
         "usrp_eeprom.h": "c",
         "eeprom.h": "c",
-        "atomic.h": "c"
+        "atomic.h": "c",
+        "usrpmaster.h": "c",
+        "i2cio.h": "c"
     }
 }

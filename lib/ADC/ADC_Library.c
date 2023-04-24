@@ -9,6 +9,13 @@
 
 int state = 0;
 
+ enum {
+	adcInternalVoltage=0,
+	adcTemperature,
+	adcExternalVoltage
+
+}adcMux;
+
 void ADC_init(void)
 {
 	/* Disable digital input buffer */
@@ -27,17 +34,6 @@ void ADC_init(void)
 }
 uint16_t ADC0_read(void)
 {
-	/* Start ADC conversion */
-	ADC0.COMMAND = ADC_STCONV_bm;
-	
-	/* Wait until ADC conversion done */
-	/*while ( !(ADC0.INTFLAGS & ADC_RESRDY_bm) )
-	{
-		;
-	}*/
-	
-	/* Clear the interrupt flag by writing 1: */
-	ADC0.INTFLAGS = ADC_RESRDY_bm;
 	return ADC0.RES;
 }
 
@@ -56,14 +52,14 @@ float temp(float adcVal){
 
 float spenningMCU(uint16_t adcVal){
 	
-	float V_in = (float)(adcVal * 3.3* 2.0)/1023.0 ;		// 2 since we are measuring over a symetric voltage divider
+	float V_in = (float)(adcVal * 3.3* 2.0)/1023.0 ;		// 2. Since we are measuring over a symetric voltage divider
 	
 	return V_in;
 }
 
 float spenningEkstern(uint16_t adcVal){
-	
-	float V_in = adcVal * (3.3/1023.0) * (1.0/6.6);		// Må finne motstandsverdier
+	// 6.6 because we are measuring over a 1K, with a 5.6K in series.
+	float V_in = adcVal * (3.3/1023.0) * (6.6);		
 	
 	return V_in;
 }
@@ -72,32 +68,44 @@ void adcRun(void){
 	if (ADC0.INTFLAGS & ADC_RESRDY_bm){
 	switch(state){
 		
-		case 0:		// Intern spenning
+		case adcInternalVoltage:
 		default:	
-			ADC0.MUXPOS = ADC_MUXPOS_AIN5_gc;
-			ADC0.MUXNEG = ADC_MUXNEG_GND_gc;
 			USRP.selfVoltage.voltage = spenningMCU(ADC0_read());
 			state = 1;
 			break;
 			
-		case 1:		// Temperatur
-		
-			ADC0.MUXPOS = ADC_MUXPOS_AIN6_gc;	
+		case adcTemperature:
 			USRP.temperature.temperature = temp(ADC0_read());
 			state++;
 			break;
 			
-		case 2:		// Måling av ekstern spenning
-		
-			ADC0.MUXPOS = ADC_MUXPOS_AIN4_gc;
-			ADC0.MUXNEG = ADC_MUXNEG_AIN15_gc;
+		case adcExternalVoltage:				
 			USRP.externalVoltage.voltage = spenningEkstern(ADC0_read());
 			state++;
 			break;
+	}
+
+	switch(state){
 		
-		break;
+		case adcInternalVoltage:
+		default:	
+			ADC0.MUXPOS = ADC_MUXPOS_AIN5_gc;
+			ADC0.MUXNEG = ADC_MUXNEG_GND_gc;		
+			break;
+
+		case adcTemperature:
+			ADC0.MUXPOS = ADC_MUXPOS_AIN6_gc; 
+			break;
+			
+		case adcExternalVoltage:
+			ADC0.MUXPOS = ADC_MUXPOS_AIN4_gc;
+			ADC0.MUXNEG = ADC_MUXNEG_AIN15_gc;
+			break;
 		
 	}
+	//start new measurment on new pins		
+	ADC0.COMMAND = ADC_STCONV_bm;
+	ADC0.INTFLAGS = ADC_RESRDY_bm;
 	}
 	
 }

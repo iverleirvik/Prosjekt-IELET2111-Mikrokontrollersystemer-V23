@@ -1,7 +1,7 @@
 
 #include <avr/io.h>
 #include <avr/eeprom.h>
-#include "USRP_EEPROM.h""
+#include "USRP_EEPROM.h"
 #include "i2cIO.h"
 #include <util/atomic.h>
 //macro for easy definition of eeprom mapping.
@@ -50,23 +50,23 @@ void usrpEepromInit() {
     } while ((NVMCTRL.STATUS & NVMCTRL_EEBUSY_bm));
 
 
-    USRP_EEPROM_READ_word(USRP.externalVoltage.higherLimit);
+    USRP_EEPROM_READ_float(USRP.externalVoltage.higherLimit);
     do {
     } while ((NVMCTRL.STATUS & NVMCTRL_EEBUSY_bm));
-    USRP_EEPROM_READ_word(USRP.externalVoltage.lowerLimit);
+    USRP_EEPROM_READ_float(USRP.externalVoltage.lowerLimit);
     do {
     } while ((NVMCTRL.STATUS & NVMCTRL_EEBUSY_bm));
 
-    USRP_EEPROM_READ_word(USRP.selfVoltage.higherLimit);
+    USRP_EEPROM_READ_float(USRP.selfVoltage.higherLimit);
     do {
     } while ((NVMCTRL.STATUS & NVMCTRL_EEBUSY_bm));
-    USRP_EEPROM_READ_word(USRP.selfVoltage.lowerLimit);
+    USRP_EEPROM_READ_float(USRP.selfVoltage.lowerLimit);
 
 
 }
 
 void usrpEepromUpdate() {
-    USRP.leftFan.higherLimit = &EEPROM_USRP;
+
     if (!(NVMCTRL.STATUS & NVMCTRL_EEBUSY_bm)) {
 
         ATOMIC_BLOCK(ATOMIC_FORCEON) {
@@ -75,54 +75,46 @@ void usrpEepromUpdate() {
                     EEPROM_UPDATE_STATE = 0;
                 case 0:
                     USRP_EEPROM_UPDATE_word(USRP.leftFan.higherLimit);
-                    EEPROM_UPDATE_STATE++;
                     break;
                 case 1:
                     USRP_EEPROM_UPDATE_word(USRP.leftFan.lowerLimit);
-                    EEPROM_UPDATE_STATE++;
                     break;
                 case 2:
                     USRP_EEPROM_UPDATE_word(USRP.leftFan.pulsesPerRotation);
-                    EEPROM_UPDATE_STATE++;
                     break;
                 case 3:
                     USRP_EEPROM_UPDATE_word(USRP.rightFan.higherLimit);
-                    EEPROM_UPDATE_STATE++;
+
                     break;
                 case 4:
                     USRP_EEPROM_UPDATE_word(USRP.rightFan.lowerLimit);
-                    EEPROM_UPDATE_STATE++;
                     break;
                 case 5:
                     USRP_EEPROM_UPDATE_byte(USRP.rightFan.pulsesPerRotation);
-                    EEPROM_UPDATE_STATE++;
                     break;
                 case 6:
                     USRP_EEPROM_UPDATE_float(USRP.temperature.higherLimit);
-                    EEPROM_UPDATE_STATE++;
                     break;
                 case 7:
                     USRP_EEPROM_UPDATE_float(USRP.temperature.lowerLimit);
-                    EEPROM_UPDATE_STATE++;
                     break;
                 case 8:
-                    USRP_EEPROM_UPDATE_word(USRP.externalVoltage.higherLimit);
-                    EEPROM_UPDATE_STATE++;
+                    USRP_EEPROM_UPDATE_float(USRP.externalVoltage.higherLimit);
                     break;
                 case 9:
-                    USRP_EEPROM_UPDATE_word(USRP.externalVoltage.lowerLimit);
-                    EEPROM_UPDATE_STATE++;
+                    USRP_EEPROM_UPDATE_float(USRP.externalVoltage.lowerLimit);
                     break;
                 case 10:
-                    USRP_EEPROM_UPDATE_word(USRP.selfVoltage.higherLimit);
-                    EEPROM_UPDATE_STATE++;
+                    USRP_EEPROM_UPDATE_float(USRP.selfVoltage.higherLimit);
                     break;
                 case 11:
-                    USRP_EEPROM_UPDATE_word(USRP.selfVoltage.lowerLimit);
-                    EEPROM_UPDATE_STATE++;
+                    USRP_EEPROM_UPDATE_float(USRP.selfVoltage.lowerLimit);
+                    //togle for indication that it runs.
                     PORTB.OUTTGL = PIN3_bm;
                     break;
             }
+            //update next eeprom adress on next functioncall.
+            EEPROM_UPDATE_STATE++;
         }
     }
 }
