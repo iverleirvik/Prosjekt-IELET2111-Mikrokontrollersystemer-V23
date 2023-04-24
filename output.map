@@ -1,0 +1,842 @@
+Archive member included to satisfy reference by file (symbol)
+
+.pio\build\curiosity_nano_db\liba85\libAC.a(AC.c.o)
+                              .pio\build\curiosity_nano_db\src\main.c.o (symbol from plugin) (ACLeftInit)
+.pio\build\curiosity_nano_db\lib32f\libTWI.a(TWI_blockData.c.o)
+                              .pio\build\curiosity_nano_db\src\main.c.o (symbol from plugin) (_TWI_SetAdressPointer)
+.pio\build\curiosity_nano_db\lib32f\libTWI.a(TWI_client.c.o)
+                              .pio\build\curiosity_nano_db\src\main.c.o (symbol from plugin) (TWI_initClient)
+.pio\build\curiosity_nano_db\lib64e\libADC.a(ADC_Library.c.o)
+                              .pio\build\curiosity_nano_db\src\main.c.o (symbol from plugin) (ADC_init)
+.pio\build\curiosity_nano_db\lib07b\libBROWN_OUT.a(BROWN_OUT.c.o)
+                              .pio\build\curiosity_nano_db\src\main.c.o (symbol from plugin) (brownOutInit)
+.pio\build\curiosity_nano_db\libf72\libCheck.a(check.c.o)
+                              .pio\build\curiosity_nano_db\src\main.c.o (symbol from plugin) (check)
+.pio\build\curiosity_nano_db\lib1fe\libUSRP_EEPROM.a(USRP_EEPROM.c.o)
+                              .pio\build\curiosity_nano_db\src\main.c.o (symbol from plugin) (usrpEepromInit)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_exit.o)
+                              c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4/crtavr128db48.o (exit)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libc.a(iob.o)
+                              .pio\build\curiosity_nano_db\src\main.c.o (symbol from plugin) (__iob)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_byte.o)
+                              USRP_EEPROM.c.o (symbol from plugin) (eeprom_read_byte)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_dword.o)
+                              USRP_EEPROM.c.o (symbol from plugin) (eeprom_read_float)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_word.o)
+                              USRP_EEPROM.c.o (symbol from plugin) (eeprom_read_word)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_byte.o)
+                              USRP_EEPROM.c.o (symbol from plugin) (eeprom_update_byte)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_dword.o)
+                              USRP_EEPROM.c.o (symbol from plugin) (eeprom_update_float)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_word.o)
+                              USRP_EEPROM.c.o (symbol from plugin) (eeprom_update_word)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eewr_byte.o)
+                              c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_byte.o) (eeprom_write_r18)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_clear_bss.o)
+                              c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libc.a(iob.o) (__do_clear_bss)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(addsf3.o)
+                              C:\Users\hoved\AppData\Local\Temp\ccB4kwUP.ltrans0.ltrans.o (__subsf3)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o)
+                              c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(addsf3.o) (__addsf3x)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(divsf3.o)
+                              C:\Users\hoved\AppData\Local\Temp\ccB4kwUP.ltrans0.ltrans.o (__divsf3)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(divsf3x.o)
+                              c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(divsf3.o) (__divsf3x)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(floatsisf.o)
+                              C:\Users\hoved\AppData\Local\Temp\ccB4kwUP.ltrans0.ltrans.o (__floatunsisf)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_inf.o)
+                              c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o) (__fp_inf)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_nan.o)
+                              c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o) (__fp_nan)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscA.o)
+                              c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o) (__fp_pscA)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscB.o)
+                              c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o) (__fp_pscB)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_round.o)
+                              c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(addsf3.o) (__fp_round)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_split3.o)
+                              c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o) (__fp_split3)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_zero.o)
+                              c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o) (__fp_zero)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(gesf2.o)
+                              C:\Users\hoved\AppData\Local\Temp\ccB4kwUP.ltrans0.ltrans.o (__gtsf2)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(log.o)
+                              C:\Users\hoved\AppData\Local\Temp\ccB4kwUP.ltrans0.ltrans.o (log)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3.o)
+                              C:\Users\hoved\AppData\Local\Temp\ccB4kwUP.ltrans0.ltrans.o (__mulsf3)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3x.o)
+                              c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(log.o) (__mulsf3x)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_cmp.o)
+                              c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(gesf2.o) (__fp_cmp)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_mpack.o)
+                              c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(log.o) (__fp_mpack)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_powser.o)
+                              c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(log.o) (__fp_powser)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_tablejump2.o)
+                              C:\Users\hoved\AppData\Local\Temp\ccB4kwUP.ltrans0.ltrans.o (__tablejump2__)
+c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_copy_data.o)
+                              C:\Users\hoved\AppData\Local\Temp\ccB4kwUP.ltrans0.ltrans.o (__do_copy_data)
+
+Allocating common symbols
+Common symbol       size              file
+
+partOfAdress        0x1               TWI_client.c.o (symbol from plugin)
+__iob               0x6               c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libc.a(iob.o)
+_dataMap            0xff              .pio\build\curiosity_nano_db\src\main.c.o (symbol from plugin)
+
+Discarded input sections
+
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4/crtavr128db48.o
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4/crtavr128db48.o
+ .text          0x00000000        0x0 .pio\build\curiosity_nano_db\src\main.c.o (symbol from plugin)
+ .avr.prop      0x00000000       0x16 C:\Users\hoved\AppData\Local\Temp\ccB4kwUP.ltrans0.ltrans.o
+ .text          0x00000000        0x0 AC.c.o (symbol from plugin)
+ .text          0x00000000        0x0 TWI_blockData.c.o (symbol from plugin)
+ .text          0x00000000        0x0 TWI_client.c.o (symbol from plugin)
+ .text          0x00000000        0x0 ADC_Library.c.o (symbol from plugin)
+ .text          0x00000000        0x0 BROWN_OUT.c.o (symbol from plugin)
+ .text          0x00000000        0x0 check.c.o (symbol from plugin)
+ .text          0x00000000        0x0 USRP_EEPROM.c.o (symbol from plugin)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_exit.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_exit.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc   0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libc.a(iob.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libc.a(iob.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libc.a(iob.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_byte.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_byte.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_byte.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_dword.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_dword.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_dword.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_word.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_word.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_word.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_byte.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_byte.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_byte.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_dword.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_dword.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_dword.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_word.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_word.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_word.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eewr_byte.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eewr_byte.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eewr_byte.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(addsf3.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(addsf3.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(addsf3.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(divsf3.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(divsf3.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(divsf3.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(divsf3x.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(divsf3x.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(divsf3x.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(floatsisf.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(floatsisf.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(floatsisf.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_inf.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_inf.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_inf.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_nan.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_nan.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_nan.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscA.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscA.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscA.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscB.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscB.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscB.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_round.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_round.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_round.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_split3.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_split3.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_split3.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_zero.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_zero.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_zero.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(gesf2.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(gesf2.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(gesf2.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(log.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(log.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(log.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3x.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3x.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3x.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_cmp.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_cmp.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_cmp.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_mpack.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_mpack.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_mpack.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_powser.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_powser.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_powser.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .text          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_copy_data.o)
+ .data          0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_copy_data.o)
+ .bss           0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_copy_data.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00804000         0x00004000         rw !x
+eeprom           0x00810000         0x00000200         rw !x
+fuse             0x00820000         0x00000010         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+user_signatures  0x00850000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x804000
+                0x00008000                __RODATA_PM_OFFSET__ = 0x8000
+LOAD c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4/crtavr128db48.o
+Address of section .text set to 0x0
+Address of section .FLMAP_SECTION1 set to 0x8000
+Address of section .FLMAP_SECTION2 set to 0x10000
+Address of section .FLMAP_SECTION3 set to 0x18000
+LOAD .pio\build\curiosity_nano_db\src\main.c.o
+LOAD C:\Users\hoved\AppData\Local\Temp\ccB4kwUP.ltrans0.ltrans.o
+START GROUP
+LOAD .pio\build\curiosity_nano_db\liba85\libAC.a
+LOAD .pio\build\curiosity_nano_db\lib32f\libTWI.a
+LOAD .pio\build\curiosity_nano_db\lib64e\libADC.a
+LOAD .pio\build\curiosity_nano_db\lib07b\libBROWN_OUT.a
+LOAD .pio\build\curiosity_nano_db\libf72\libCheck.a
+LOAD .pio\build\curiosity_nano_db\lib1fe\libUSRP_EEPROM.a
+LOAD .pio\build\curiosity_nano_db\libFrameworkArduino.a
+LOAD c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a
+END GROUP
+START GROUP
+LOAD c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a
+LOAD c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a
+LOAD c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libc.a
+LOAD c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a
+END GROUP
+                [0x00020000]                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x100000
+                [0x00004000]                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
+                [0x00000200]                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x400
+                [0x00000010]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
+                0x00000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
+                0x00000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
+                0x00000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
+                [0x00804000]                __DATA_REGION_ORIGIN__ = DEFINED (__DATA_REGION_ORIGIN__)?__DATA_REGION_ORIGIN__:0x802000
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x1158
+ *(.vectors)
+ .vectors       0x00000000       0xf4 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4/crtavr128db48.o
+                0x00000000                __vector_default
+                0x00000000                __vectors
+ *(.vectors)
+ *(.progmem.gcc*)
+ .progmem.gcc_fplib
+                0x000000f4       0x5a c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(log.o)
+                0x0000014e                . = ALIGN (0x2)
+                0x0000014e                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000014e        0x0 linker stubs
+ *(.trampolines*)
+                0x0000014e                __trampolines_end = .
+ *libprintf_flt.a:*(.progmem.data)
+ *libc.a:*(.progmem.data)
+ *(.progmem*)
+                0x0000014e                . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000014e                __ctors_start = .
+ *(.ctors)
+                0x0000014e                __ctors_end = .
+                0x0000014e                __dtors_start = .
+ *(.dtors)
+                0x0000014e                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000014e        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4/crtavr128db48.o
+                0x0000014e                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000014e        0xc c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4/crtavr128db48.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x0000015a       0x10 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_clear_bss.o)
+                0x0000015a                __do_clear_bss
+ .init4         0x0000016a       0x1a c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_copy_data.o)
+                0x0000016a                __do_copy_data
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000184        0x4 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4/crtavr128db48.o
+ *(.init9)
+ *(.text)
+ .text          0x00000188        0x2 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4/crtavr128db48.o
+                0x00000188                __vector_38
+                0x00000188                __vector_22
+                0x00000188                __vector_28
+                0x00000188                __vector_1
+                0x00000188                __vector_32
+                0x00000188                __vector_34
+                0x00000188                __vector_24
+                0x00000188                __vector_12
+                0x00000188                __vector_55
+                0x00000188                __vector_46
+                0x00000188                __bad_interrupt
+                0x00000188                __vector_6
+                0x00000188                __vector_31
+                0x00000188                __vector_35
+                0x00000188                __vector_39
+                0x00000188                __vector_3
+                0x00000188                __vector_23
+                0x00000188                __vector_30
+                0x00000188                __vector_45
+                0x00000188                __vector_25
+                0x00000188                __vector_11
+                0x00000188                __vector_54
+                0x00000188                __vector_13
+                0x00000188                __vector_17
+                0x00000188                __vector_19
+                0x00000188                __vector_56
+                0x00000188                __vector_7
+                0x00000188                __vector_49
+                0x00000188                __vector_41
+                0x00000188                __vector_43
+                0x00000188                __vector_27
+                0x00000188                __vector_33
+                0x00000188                __vector_47
+                0x00000188                __vector_52
+                0x00000188                __vector_37
+                0x00000188                __vector_4
+                0x00000188                __vector_44
+                0x00000188                __vector_51
+                0x00000188                __vector_9
+                0x00000188                __vector_2
+                0x00000188                __vector_21
+                0x00000188                __vector_15
+                0x00000188                __vector_36
+                0x00000188                __vector_58
+                0x00000188                __vector_29
+                0x00000188                __vector_60
+                0x00000188                __vector_40
+                0x00000188                __vector_8
+                0x00000188                __vector_26
+                0x00000188                __vector_48
+                0x00000188                __vector_14
+                0x00000188                __vector_57
+                0x00000188                __vector_53
+                0x00000188                __vector_10
+                0x00000188                __vector_50
+                0x00000188                __vector_16
+                0x00000188                __vector_59
+                0x00000188                __vector_20
+                0x00000188                __vector_42
+ .text          0x0000018a      0x400 C:\Users\hoved\AppData\Local\Temp\ccB4kwUP.ltrans0.ltrans.o
+                0x0000030a                __vector_18
+                0x00000482                __vector_5
+                0x0000058a                . = ALIGN (0x2)
+ *(.text.*)
+ .text.startup  0x0000058a      0x686 C:\Users\hoved\AppData\Local\Temp\ccB4kwUP.ltrans0.ltrans.o
+                0x0000058a                main
+ .text.avr-libc
+                0x00000c10       0x10 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_byte.o)
+                0x00000c10                eeprom_read_byte
+                0x00000c18                eeprom_mapen
+ .text.avr-libc
+                0x00000c20        0xc c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_dword.o)
+                0x00000c20                eeprom_read_float
+                0x00000c20                eeprom_read_dword
+ .text.avr-libc
+                0x00000c2c        0x8 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_word.o)
+                0x00000c2c                eeprom_read_word
+ .text.avr-libc
+                0x00000c34       0x12 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_byte.o)
+                0x00000c34                eeprom_update_byte
+                0x00000c36                eeprom_update_r18
+ .text.avr-libc
+                0x00000c46       0x10 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_dword.o)
+                0x00000c46                eeprom_update_float
+                0x00000c46                eeprom_update_dword
+ .text.avr-libc
+                0x00000c56        0x8 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_word.o)
+                0x00000c56                eeprom_update_word
+ .text.avr-libc
+                0x00000c5e       0x28 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eewr_byte.o)
+                0x00000c5e                eeprom_write_byte
+                0x00000c60                eeprom_write_r18
+ .text.avr-libc.fplib
+                0x00000c86        0xa c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(addsf3.o)
+                0x00000c86                __subsf3
+                0x00000c88                __addsf3
+ .text.avr-libc.fplib
+                0x00000c90       0xc0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o)
+                0x00000caa                __addsf3x
+ .text.avr-libc.fplib
+                0x00000d50        0x4 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(divsf3.o)
+                0x00000d50                __divsf3
+ .text.avr-libc.fplib
+                0x00000d54       0xcc c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(divsf3x.o)
+                0x00000d6a                __divsf3x
+                0x00000d6e                __divsf3_pse
+ .text.avr-libc.fplib
+                0x00000e20       0x7a c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(floatsisf.o)
+                0x00000e20                __floatunsisf
+                0x00000e24                __floatsisf
+ .text.avr-libc.fplib
+                0x00000e9a        0xc c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_inf.o)
+                0x00000e9a                __fp_inf
+ .text.avr-libc.fplib
+                0x00000ea6        0x6 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_nan.o)
+                0x00000ea6                __fp_nan
+ .text.avr-libc.fplib
+                0x00000eac        0xe c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscA.o)
+                0x00000eac                __fp_pscA
+ .text.avr-libc.fplib
+                0x00000eba        0xe c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscB.o)
+                0x00000eba                __fp_pscB
+ .text.avr-libc.fplib
+                0x00000ec8       0x22 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_round.o)
+                0x00000ec8                __fp_round
+ .text.avr-libc.fplib
+                0x00000eea       0x44 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_split3.o)
+                0x00000eea                __fp_split3
+                0x00000efa                __fp_splitA
+ .text.avr-libc.fplib
+                0x00000f2e        0xe c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_zero.o)
+                0x00000f2e                __fp_zero
+                0x00000f30                __fp_szero
+ .text.avr-libc.fplib
+                0x00000f3c        0x8 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(gesf2.o)
+                0x00000f3c                __gesf2
+                0x00000f3c                __gtsf2
+ .text.avr-libc.fplib
+                0x00000f44       0x8a c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(log.o)
+                0x00000f4e                log
+ .text.avr-libc.fplib
+                0x00000fce        0x4 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3.o)
+                0x00000fce                __mulsf3
+ .text.avr-libc.fplib
+                0x00000fd2       0xc2 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3x.o)
+                0x00000fe6                __mulsf3x
+                0x00000fea                __mulsf3_pse
+ .text.avr-libc.fplib
+                0x00001094       0x48 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_cmp.o)
+                0x00001094                __fp_cmp
+ .text.avr-libc.fplib
+                0x000010dc       0x1c c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_mpack.o)
+                0x000010dc                __fp_mpack
+                0x000010e0                __fp_mpack_finite
+ .text.avr-libc.fplib
+                0x000010f8       0x4a c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libm.a(fp_powser.o)
+                0x000010f8                __fp_powser
+ .text.libgcc   0x00001142       0x12 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_tablejump2.o)
+                0x00001142                __tablejump2__
+                0x00001154                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00001154        0x0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_exit.o)
+                0x00001154                _exit
+                0x00001154                exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00001154        0x4 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00001158                _etext = .
+
+.data           0x00804000        0xe load address 0x00001158
+                0x00804000                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00804000        0xe C:\Users\hoved\AppData\Local\Temp\ccB4kwUP.ltrans0.ltrans.o
+ *(.data*)
+ *(.gnu.linkonce.d*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.r*)
+                0x0080400e                . = ALIGN (0x2)
+                0x0080400e                _edata = .
+                0x0080400e                PROVIDE (__data_end, .)
+
+.bss            0x0080400e      0x124
+                0x0080400e                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0080400e      0x11e C:\Users\hoved\AppData\Local\Temp\ccB4kwUP.ltrans0.ltrans.o
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x0080412c        0x6 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libc.a(iob.o)
+                0x0080412c                __iob
+                0x00804132                PROVIDE (__bss_end, .)
+                0x00001158                __data_load_start = LOADADDR (.data)
+                0x00001166                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00804132        0x0
+                [!provide]                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                [!provide]                PROVIDE (__noinit_end, .)
+                0x00804132                _end = .
+                [!provide]                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000       0x1a
+ *(.eeprom*)
+ .eeprom        0x00810000       0x1a C:\Users\hoved\AppData\Local\Temp\ccB4kwUP.ltrans0.ltrans.o
+                0x0081001a                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x11
+ *(.comment)
+ .comment       0x00000000       0x12 C:\Users\hoved\AppData\Local\Temp\ccB4kwUP.ltrans0.ltrans.o
+ .comment       0x00000000       0x11 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libc.a(iob.o)
+                                 0x12 (size before relaxing)
+
+.note.gnu.avr.deviceinfo
+                0x00000000       0x40
+ .note.gnu.avr.deviceinfo
+                0x00000000       0x40 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4/crtavr128db48.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x160
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_exit.o)
+ .debug_aranges
+                0x00000020       0x20 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_byte.o)
+ .debug_aranges
+                0x00000040       0x20 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_dword.o)
+ .debug_aranges
+                0x00000060       0x20 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_word.o)
+ .debug_aranges
+                0x00000080       0x20 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_byte.o)
+ .debug_aranges
+                0x000000a0       0x20 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_dword.o)
+ .debug_aranges
+                0x000000c0       0x20 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_word.o)
+ .debug_aranges
+                0x000000e0       0x20 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eewr_byte.o)
+ .debug_aranges
+                0x00000100       0x20 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .debug_aranges
+                0x00000120       0x20 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .debug_aranges
+                0x00000140       0x20 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_copy_data.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x360c
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000     0x2f42 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4/crtavr128db48.o
+ .debug_info    0x00002f42       0x9b c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_exit.o)
+ .debug_info    0x00002fdd       0x9f c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_byte.o)
+ .debug_info    0x0000307c       0xa0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_dword.o)
+ .debug_info    0x0000311c       0x9f c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_word.o)
+ .debug_info    0x000031bb       0xa0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_byte.o)
+ .debug_info    0x0000325b       0xa1 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_dword.o)
+ .debug_info    0x000032fc       0xa0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_word.o)
+ .debug_info    0x0000339c       0x9f c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eewr_byte.o)
+ .debug_info    0x0000343b       0x9b c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .debug_info    0x000034d6       0x9b c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .debug_info    0x00003571       0x9b c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_copy_data.o)
+
+.debug_abbrev   0x00000000     0x2d9e
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000     0x2cc2 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4/crtavr128db48.o
+ .debug_abbrev  0x00002cc2       0x14 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_exit.o)
+ .debug_abbrev  0x00002cd6       0x14 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_byte.o)
+ .debug_abbrev  0x00002cea       0x14 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_dword.o)
+ .debug_abbrev  0x00002cfe       0x14 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_word.o)
+ .debug_abbrev  0x00002d12       0x14 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_byte.o)
+ .debug_abbrev  0x00002d26       0x14 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_dword.o)
+ .debug_abbrev  0x00002d3a       0x14 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_word.o)
+ .debug_abbrev  0x00002d4e       0x14 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eewr_byte.o)
+ .debug_abbrev  0x00002d62       0x14 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .debug_abbrev  0x00002d76       0x14 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .debug_abbrev  0x00002d8a       0x14 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_copy_data.o)
+
+.debug_line     0x00000000      0x783
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x00000000      0x205 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4/crtavr128db48.o
+ .debug_line    0x00000205       0x62 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_exit.o)
+ .debug_line    0x00000267       0x79 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_byte.o)
+ .debug_line    0x000002e0       0x6e c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_dword.o)
+ .debug_line    0x0000034e       0x61 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eerd_word.o)
+ .debug_line    0x000003af       0x80 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_byte.o)
+ .debug_line    0x0000042f       0x7b c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_dword.o)
+ .debug_line    0x000004aa       0x62 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eeupd_word.o)
+ .debug_line    0x0000050c       0xc1 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4\libavr128db48.a(eewr_byte.o)
+ .debug_line    0x000005cd       0x86 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .debug_line    0x00000653       0x8c c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .debug_line    0x000006df       0xa4 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/avrxmega4\libgcc.a(_copy_data.o)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str      0x00000000     0x14f0
+ *(.debug_str)
+ .debug_str     0x00000000     0x14f0 c:/users/hoved/.platformio/packages/toolchain-atmelavr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avrxmega4/crtavr128db48.o
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(.pio\build\curiosity_nano_db\firmware.elf elf32-avr)
+LOAD linker stubs
+
+.FLMAP_SECTION1
+                0x00008000        0x0
+
+.FLMAP_SECTION2
+                0x00010000        0x0
+
+.FLMAP_SECTION3
+                0x00018000        0x0

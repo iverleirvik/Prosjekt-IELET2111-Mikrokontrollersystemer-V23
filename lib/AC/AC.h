@@ -1,9 +1,9 @@
 #ifndef AC_h
 #define AC_h
 #ifndef F_CPU 
-#define interval_sek(sek,CLKSEL_scale) ((uint16_t)(4000000UL * sek / CLKSEL_scale ))
+/*#define interval_sek(sek,CLKSEL_scale) ((uint16_t)(4000000UL * sek / CLKSEL_scale ))
 #else
-#define interval_sek(sek,CLKSEL_scale) ((uint16_t)(F_CPU * sek / CLKSEL_scale ))
+#define interval_sek(sek,CLKSEL_scale) ((uint16_t)(F_CPU * sek / CLKSEL_scale ))*/
 #endif
 #include <avr/io.h>
 #include <util/delay.h>

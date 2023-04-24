@@ -31,18 +31,18 @@ extern "C" {
     };
 
     struct __attribute__((packed)) voltage_t {
-        float voltage; //2
-        uint16_t lowerLimit;
-        uint16_t higherLimit;
-        uint8_t reserved0[10];
+        float voltage;                  //4
+        uint16_t lowerLimit;            //2
+        uint16_t higherLimit;           //2
+        uint8_t reserved0[8];  
     };
 
     struct __attribute__((packed)) fanspeed_t {
-        uint16_t rotationsPerMinute; //2
-        uint8_t pulsesPerRotation; //1
-        uint16_t lowerLimit; //2
-        uint16_t higherLimit; //2
-        uint8_t STATUS;
+        uint16_t rotationsPerMinute;    //2
+        uint8_t pulsesPerRotation;      //1
+        uint16_t lowerLimit;            //2
+        uint16_t higherLimit;           //2
+        uint8_t STATUS;                 //1
         uint8_t reserved0[8];
     };
 
