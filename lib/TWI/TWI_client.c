@@ -1,6 +1,4 @@
 #include "TWI_client.h"
-
-//#include <xc.h>
 #include <stdbool.h>
 #include <avr/interrupt.h>
 
@@ -11,16 +9,14 @@ static void (*writeHandler)(uint8_t) =0;
 static uint8_t(*readHandler)(void) =0;
 static void (*stopHandler)(void) =0;
 static void (*AdressUpdateHandler) (uint32_t);
-volatile int tst = 0;
-volatile int8_t partOfAdress;
-const uint8_t ardessByteSize = 1;
-volatile uint32_t TWI_pointer_ = 0;
+
+//variables for splitting i2c data-stream between adress and data.
+volatile int8_t partOfAdress;       //indicates current byteposition of adress.
+const uint8_t ardessByteSize = 1;   //number of bytes to use
+volatile uint32_t TWI_pointer_ = 0; //
 
 void TWI_initClient(uint8_t address) {
-    //Init Function Pointers to Null
-//    writeHandler = 0;
-//   readHandler = 0;
-//    stopHandler = 0;
+
 
     //Enable Operation in Debug
     TWI0.DBGCTRL = TWI_DBGRUN_bm;
@@ -35,13 +31,11 @@ void TWI_initClient(uint8_t address) {
 void TWI_initPins(void) {
     //PA2/PA3
 
-    //Output I/O
+    //set pins as output
     PORTA.DIRSET = PIN2_bm | PIN3_bm;
 
-#ifdef TWI_ENABLE_PULLUPS
-    //Enable Pull-Ups
+    //Enable internal Pull-Ups
     PORTA.PINCONFIG = PORT_PULLUPEN_bm;
-#endif
 
     //Select RA2/RA3
     PORTA.PINCTRLUPD = PIN2_bm | PIN3_bm;
@@ -62,16 +56,20 @@ ISR(TWI0_TWIS_vect) {
                 TWI_pointer_ |= (uint32_t) TWI_data << (partOfAdress * 8);
                 partOfAdress++;
             } else if ((partOfAdress == ardessByteSize) && (AdressUpdateHandler)) {
+                //update pointer and write data
                 AdressUpdateHandler(TWI_pointer_);
                 partOfAdress++;
                 if (writeHandler) {
                     writeHandler(TWI_data);
                 }
             } else if (writeHandler) {
+                if (writeHandler) {
                 writeHandler(TWI_data);
+                }
             }
 
         } else {
+            //Data Read (Host <- Client)
             if (readHandler) {
                 TWI_data = readHandler();
             }
@@ -84,9 +82,11 @@ ISR(TWI0_TWIS_vect) {
 
     if (TWI0.SSTATUS & TWI_APIF_bm) {
         //Address Match or STOP
-            //reset on each new request.
-            TWI_pointer_ = 0;
-            partOfAdress = 0;
+
+        //reset on each new request.
+        TWI_pointer_ = 0;
+        partOfAdress = 0;
+
         if (TWI0.SSTATUS & TWI_AP_ADR_gc) {
             //Address Match
             TWI0.SCTRLB = TWI_ACKACT_ACK_gc | TWI_SCMD_RESPONSE_gc;

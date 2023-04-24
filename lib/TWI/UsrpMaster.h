@@ -1,6 +1,6 @@
 #ifndef USRPMASSTER_H
 #define USRPMASSTER_H
-
+/*definition of adress position and length of variable.*/
 
 #define USRP_SYSTEM_VERSION                     0x0
 #define USRP_SYSTEM_VERSION_length              2
@@ -19,17 +19,18 @@
 
 
 #define USRP_SELFVOLTAGE_VOLTAGE                0x20
-#define USRP_SELFVOLTAGE_VOLTAGE_length         2
-#define USRP_SELFVOLTAGE_LOWERLIMIT             0x22
+#define USRP_SELFVOLTAGE_VOLTAGE_length         4
+#define USRP_SELFVOLTAGE_LOWERLIMIT             0x24
 #define USRP_SELFVOLTAGE_LOWERLIMIT_length      2
-#define USRP_SELFVOLTAGE_HIGHERLIMIT            0x24
+#define USRP_SELFVOLTAGE_HIGHERLIMIT            0x26
 #define USRP_SELFVOLTAGE_HIGHERLIMIT_length     2
 
+
 #define USRP_EXTERNALVOLTAGE_VOLTAGE                0x30
-#define USRP_EXTERNALVOLTAGE_VOLTAGE_length         2
-#define USRP_EXTERNALVOLTAGE_LOWERLIMIT             0x32
+#define USRP_EXTERNALVOLTAGE_VOLTAGE_length         4
+#define USRP_EXTERNALVOLTAGE_LOWERLIMIT             0x34
 #define USRP_EXTERNALVOLTAGE_LOWERLIMIT_length      2
-#define USRP_EXTERNALVOLTAGE_HIGHERLIMIT            0x34
+#define USRP_EXTERNALVOLTAGE_HIGHERLIMIT            0x36
 #define USRP_EXTERNALVOLTAGE_HIGHERLIMIT_length     2
 
 #define USRP_LEFTFAN_ROTATIONSPERMINUTE             0x40
