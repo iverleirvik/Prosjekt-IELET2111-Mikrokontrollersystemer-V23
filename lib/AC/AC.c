@@ -3,17 +3,21 @@
 #include "AC.h"
 
 
-void ACLeftInit(void) { //left
+void ACLeftInit(void) { 
     // set to output and add internal pullup.
     PORTB.PIN2CTRL = PORT_PULLUPEN_bm;
     PORTB.DIR = PIN0_bm;
+
     VREF.ACREF = VREF_REFSEL_1V024_gc; // select voltage refference
+    // configure event system.
     EVSYS.CHANNEL0 |= EVSYS_CHANNEL0_AC0_OUT_gc;
-    AC0.CTRLA |= AC_ENABLE_bm | AC_HYSMODE_SMALL_gc; // enable and set some filtering
+    EVSYS.USERTCA0CNTA |= EVSYS_USER_CHANNEL0_gc;
+
+    // enable comparator to send 
+    AC0.CTRLA |= AC_ENABLE_bm ; 
     AC0.INTCTRL |= AC_INTMODE_WINDOW_ABOVE_gc;
     AC0.MUXCTRL |= AC_MUXPOS_AINP0_gc; //PD2
     AC0.MUXCTRL |= AC_MUXNEG_DACREF_gc; //internal refrence
-    EVSYS.USERTCA0CNTA |= EVSYS_USER_CHANNEL0_gc;
     AC0.DACREF = 1; //
 }
 void ACRightInit(void) { //right

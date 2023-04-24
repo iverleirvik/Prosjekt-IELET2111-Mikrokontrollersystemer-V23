@@ -13,7 +13,7 @@ static void (*AdressUpdateHandler) (uint32_t);
 //variables for splitting i2c data-stream between adress and data.
 volatile int8_t partOfAdress;       //indicates current byteposition of adress.
 const uint8_t ardessByteSize = 1;   //number of bytes to use
-volatile uint32_t TWI_pointer_ = 0; //
+volatile uint32_t TWI_pointer_ = 0; //variable for building up the adress.
 
 void TWI_initClient(uint8_t address) {
 
@@ -56,7 +56,7 @@ ISR(TWI0_TWIS_vect) {
                 TWI_pointer_ |= (uint32_t) TWI_data << (partOfAdress * 8);
                 partOfAdress++;
             } else if ((partOfAdress == ardessByteSize) && (AdressUpdateHandler)) {
-                //update pointer and write data
+                //first databyte is receved. update pointer and write data.
                 AdressUpdateHandler(TWI_pointer_);
                 partOfAdress++;
                 if (writeHandler) {
@@ -96,6 +96,7 @@ ISR(TWI0_TWIS_vect) {
             if (stopHandler) {
                 stopHandler();
                 //update if only partial adress is sent. 
+                //if no adress is sent it points to adress 0.
                 AdressUpdateHandler(TWI_pointer_);
             }
 
@@ -104,7 +105,7 @@ ISR(TWI0_TWIS_vect) {
     }
 }
 
-//Assigns the function to call when a byte is written to this device
+//Assigns the function to call when a data byte is written to this device
 
 void TWI_assignByteWriteHandler(void (*onWrite)(uint8_t)) {
     writeHandler = onWrite;
@@ -121,7 +122,7 @@ void TWI_assignByteReadHandler(uint8_t(*onRead)(void)) {
 void TWI_assignStopHandler(void (*onStop)(void)) {
     stopHandler = onStop;
 }
-
+//Assigns the function to call when updating the address pointer.
 void TWI_assignadressHandler(void(*updateAdress)(uint16_t)) {
     AdressUpdateHandler = updateAdress;
 }
