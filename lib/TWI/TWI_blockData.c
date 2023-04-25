@@ -6,6 +6,7 @@
 
 
 
+
 static volatile uint32_t addressPointer = 0;
 
 static volatile uint8_t* viritualMemory = 0;
@@ -26,8 +27,10 @@ void _TWI_StoreByte(uint8_t _TWI_data) {
         addressPointer = 0;
     }
     if (writeProtectedArray){
-    if (!_isProtected(addressPointer)){
+    if (!_isProtected(addressPointer )){
     viritualMemory[addressPointer] = _TWI_data;
+    }else{
+        
     }
     }
     addressPointer++;

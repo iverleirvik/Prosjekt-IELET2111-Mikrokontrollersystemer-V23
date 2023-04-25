@@ -87,9 +87,9 @@ extern "C" {
         0b0001000000001111, /*system*/
         0b0001000000001111, /*temperature*/
         0b0001000000001111, /*MCU voltage*/
-        0b0000000010001111, /*external voltage*/
+        0b0001000000001111, /*external voltage*/
         0b0000000010000011, /*left fan*/
-        0b0000000000000000, /*right fan*/
+        0b0000000010000000, /*right fan*/
         0b0000000000000000, /*undefined*/
         0b0000000000000000, /*undefined*/
         0b0000000000000000, /*undefined*/

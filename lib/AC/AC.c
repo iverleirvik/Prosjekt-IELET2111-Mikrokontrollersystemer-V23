@@ -5,8 +5,8 @@
 
 void ACLeftInit(void) { // Left
     // Set to output and add internal pullup.
-    PORTB.PIN2CTRL = PORT_PULLUPEN_bm;
-    PORTB.DIR = PIN0_bm;
+    PORTD.PIN2CTRL |= PORT_PULLUPEN_bm;
+    PORTD.DIR |= PIN0_bm;
 
     VREF.ACREF = VREF_REFSEL_2V048_gc; // Select voltage refference.
     // Configure event system to connect comparator to counter.
@@ -23,8 +23,8 @@ void ACLeftInit(void) { // Left
 
 void ACRightInit(void) { // Right
     // Set to output and add internal pullup.
-    PORTB.PIN2CTRL = PORT_PULLUPEN_bm;
-    PORTB.DIR = PIN0_bm;
+    PORTD.PIN2CTRL |= PORT_PULLUPEN_bm;
+    PORTD.DIR |= PIN0_bm;
     // Configure event system.
     EVSYS.CHANNEL1 |= EVSYS_CHANNEL1_AC1_OUT_gc;
     EVSYS.USERTCA1CNTA |= EVSYS_USER_CHANNEL1_gc;

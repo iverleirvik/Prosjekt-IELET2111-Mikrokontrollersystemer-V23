@@ -109,8 +109,7 @@ void usrpEepromUpdate() {
                     break;
                 case 11:
                     USRP_EEPROM_UPDATE_float(USRP.selfVoltage.lowerLimit);
-                    //togle for indication that it runs.
-                    PORTB.OUTTGL = PIN3_bm;
+                                      
                     break;
             }
             //update next eeprom adress on next functioncall.

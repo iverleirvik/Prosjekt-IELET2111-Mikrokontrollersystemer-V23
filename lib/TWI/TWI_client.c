@@ -84,13 +84,13 @@ ISR(TWI0_TWIS_vect) {
         //Address Match or STOP
 
         //reset on each new request.
-        TWI_pointer_ = 0;
-        partOfAdress = 0;
+
 
         if (TWI0.SSTATUS & TWI_AP_ADR_gc) {
             //Address Match
             TWI0.SCTRLB = TWI_ACKACT_ACK_gc | TWI_SCMD_RESPONSE_gc;
-
+            TWI_pointer_ = 0;
+            partOfAdress = 0;
         } else {
             //STOP Condition
             if (stopHandler) {
@@ -98,6 +98,8 @@ ISR(TWI0_TWIS_vect) {
                 //update if only partial adress is sent. 
                 //if no adress is sent it points to adress 0.
                 AdressUpdateHandler(TWI_pointer_);
+                TWI_pointer_ = 0;
+                partOfAdress = 0;
             }
 
             TWI0.SCTRLB = TWI_ACKACT_NACK_gc | TWI_SCMD_COMPTRANS_gc;

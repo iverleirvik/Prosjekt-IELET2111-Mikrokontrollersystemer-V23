@@ -29,24 +29,28 @@ int USART3_printChar(const char character, FILE *stream);
 FILE USART_stream = FDEV_SETUP_STREAM(USART3_printChar, NULL, _FDEV_SETUP_WRITE);
 
 int main(void)  {
-	//PORTB.DIR|=PIN3_bm;
+	PORTB.DIR|=PIN3_bm;
 	USART3_init();
     brownOutInit();//mainly improtant for EEPROM.
     /* RTC */
+    
     RTC_init();
     
     ACLeftInit();
     ACRightInit();
+    
     //set to arbitrary number higher than expected pulses per second
     TCALeftInit(60000); 
     TCARightInit(60000);
     //initialize write protection for i2c
+    
     writeProtectedInit(writeProtection,(sizeof(writeProtection)/sizeof(writeProtection[0])));
     //Initialize ADC
     ADC_init();
 
     //Initialize LEDs
     ledInit();
+    
     
   sei();
     //Initialize Memory to 0x00
@@ -74,8 +78,7 @@ int main(void)  {
   
 
     while(1) {
-        //_delay_ms(100);
-        
+    
         usrpEepromUpdate();
         adcRun();
         check();

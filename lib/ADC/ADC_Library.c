@@ -23,7 +23,8 @@ void ADC_init(void)
 	
 	ADC0.CTRLA = ADC_ENABLE_bm /* ADC Enable: enabled */
 	| ADC_RESSEL_10BIT_gc; /* 10-bit mode */
-
+	ADC0.COMMAND = ADC_STCONV_bm;
+	ADC0.INTFLAGS = ADC_RESRDY_bm;
 }
 uint16_t ADC0_read(void)
 {
@@ -62,6 +63,7 @@ float spenningEkstern(uint16_t adcVal){
 void adcRun(void){
 	if (ADC0.INTFLAGS & ADC_RESRDY_bm){	// Making sure it is okay to read from thr ADC.
 	//store finnished measurment
+	
 	switch(state){
 		
 		case adcInternalVoltage:
@@ -72,6 +74,7 @@ void adcRun(void){
 			
 		case adcTemperature:
 			USRP.temperature.temperature = temp(ADC0_read());
+			
 			state++;
 			break;
 			
@@ -80,7 +83,10 @@ void adcRun(void){
 			state++;
 			break;
 	}
-	//swich pins for new measurment
+	}
+	//switch pins for new measurment.
+	//start new measurment if no measurment is started.
+	if (!(ADC0.COMMAND & ADC_STCONV_bm)){
 	switch(state){
 		
 		case adcInternalVoltage:
