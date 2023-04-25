@@ -91,8 +91,22 @@ extern "C" {
      * Assigns the buffer of memory to read data from.
      */
     void ViritualMemoryInit(volatile uint8_t* buffer, uint16_t size);
+/**
+     * uint8_t _isProtected(uint32_t address)
+     * @param address (uint32_t) - address to check write protection for
+     * 
+     * check if adress is write protected .
+     */
+    uint8_t _isProtected(uint32_t address);
 
+    /**
+     * void writeProtectedInit(const uint16_t *rules,uint16_t size)
+     * @param rules (uint32_t) - an array of 16-bit where each bit represents one byte.
+     * @param size  (uint32_t) - size of the array
+     * initialixe array for write protection.
+     */
 
+    void writeProtectedInit(const uint16_t *rules,uint16_t size);
 
 #ifdef	__cplusplus
 }

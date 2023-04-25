@@ -61,6 +61,7 @@ float spenningEkstern(uint16_t adcVal){
 
 void adcRun(void){
 	if (ADC0.INTFLAGS & ADC_RESRDY_bm){	// Making sure it is okay to read from thr ADC.
+	//store finnished measurment
 	switch(state){
 		
 		case adcInternalVoltage:
@@ -79,7 +80,7 @@ void adcRun(void){
 			state++;
 			break;
 	}
-
+	//swich pins for new measurment
 	switch(state){
 		
 		case adcInternalVoltage:

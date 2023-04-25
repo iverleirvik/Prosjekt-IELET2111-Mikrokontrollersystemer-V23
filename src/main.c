@@ -1,7 +1,8 @@
 
 #define F_CPU 4000000UL
 #define USART3_BAUD_RATE(BAUD_RATE) ((float)(F_CPU * 64 / (16 * (float)BAUD_RATE)) + 0.5)
-
+#define ID      0x0f0f
+#define VERSION 0x1234
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
@@ -39,7 +40,8 @@ int main(void)  {
     //set to arbitrary number higher than expected pulses per second
     TCALeftInit(60000); 
     TCARightInit(60000);
-
+    //initialize write protection for i2c
+    writeProtectedInit(writeProtection,(sizeof(writeProtection)/sizeof(writeProtection[0])));
     //Initialize ADC
     ADC_init();
 
@@ -52,6 +54,9 @@ int main(void)  {
         _dataMap.TWI[i] = 0x00;
     }
     usrpEepromInit();
+    // set ID and version for this device.
+    _dataMap.avr.system.id=ID;
+    _dataMap.avr.system.version=VERSION;
     //Attach i2c/TWI viritual memory.
     ViritualMemoryInit(&_dataMap.TWI, DATA_SIZE);
     

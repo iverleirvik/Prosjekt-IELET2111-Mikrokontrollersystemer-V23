@@ -44,7 +44,7 @@ void ACRightInit(void) { // Right
 void TCALeftInit(uint16_t per) { // Left
 
     TCA0.SINGLE.CTRLB |= TCA_SINGLE_WGMODE_NORMAL_gc | TCA_SINGLE_CMP0EN_bm;
-    // Set to use event-system for counting.
+    // Set to use event-system for counting. count every positive edge.
     TCA0.SINGLE.EVCTRL |= TCA_SINGLE_CNTAEI_bm | TCA_SINGLE_EVACTA_CNT_POSEDGE_gc;
     TCA0.SINGLE.PER = per;
     TCA0.SINGLE.CTRLA |= TCA_SINGLE_ENABLE_bm;
@@ -53,7 +53,7 @@ void TCALeftInit(uint16_t per) { // Left
 void TCARightInit(uint16_t per) { // Right
     
     TCA1.SINGLE.CTRLB |= TCA_SINGLE_WGMODE_NORMAL_gc | TCA_SINGLE_CMP0EN_bm;
-    // Set to use event-system for counting.
+    // Set to use event-system for counting. count every positive edge.
     TCA1.SINGLE.EVCTRL |= TCA_SINGLE_CNTAEI_bm | TCA_SINGLE_EVACTA_CNT_POSEDGE_gc;
     TCA1.SINGLE.PER = per;
     TCA1.SINGLE.CTRLA |= TCA_SINGLE_ENABLE_bm;
