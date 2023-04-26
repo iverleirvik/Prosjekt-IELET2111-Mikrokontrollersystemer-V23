@@ -71,6 +71,8 @@ void loop() {
   Serial.println(readInt16(i2cAdress, USRP_LEFTFAN_HIGHERLIMIT),DEC);
   Serial.print("    USRP_LEFTFAN_ROTATIONSPERMINUTE:      ");
   Serial.println(readInt16(i2cAdress, USRP_LEFTFAN_ROTATIONSPERMINUTE),DEC);
+  Serial.print("    USRP_LEFTFAN_STATUS:                  ");
+  Serial.println(readInt8(i2cAdress, USRP_LEFTFAN_STATUS),HEX);
 
   Serial.print("USRP_RIGHTFAN_PULSESPERROTATION:  ");
   Serial.println(readInt8(i2cAdress, USRP_RIGHTFAN_PULSESPERROTATION),DEC);
@@ -80,6 +82,8 @@ void loop() {
   Serial.println(readInt16(i2cAdress, USRP_RIGHTFAN_HIGHERLIMIT),DEC);
   Serial.print("    USRP_RIGHTFAN_ROTATIONSPERMINUTE:     ");
   Serial.println(readInt16(i2cAdress, USRP_RIGHTFAN_ROTATIONSPERMINUTE),DEC);
+  Serial.print("    USRP_RIGHTFAN_STATUS:                 ");
+  Serial.println(readInt8(i2cAdress, USRP_RIGHTFAN_STATUS),HEX);
   Serial.println();
 
 

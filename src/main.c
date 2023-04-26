@@ -1,8 +1,8 @@
 
 #define F_CPU 4000000UL
 #define USART3_BAUD_RATE(BAUD_RATE) ((float)(F_CPU * 64 / (16 * (float)BAUD_RATE)) + 0.5)
-#define ID      0x0f0f
-#define VERSION 0x1234
+#define ID      0x0000
+#define VERSION 0x0000
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
@@ -29,7 +29,7 @@ int USART3_printChar(const char character, FILE *stream);
 FILE USART_stream = FDEV_SETUP_STREAM(USART3_printChar, NULL, _FDEV_SETUP_WRITE);
 
 int main(void)  {
-	PORTB.DIR|=PIN3_bm;
+	//PORTB.DIR|=PIN3_bm;
 	USART3_init();
     brownOutInit();//mainly improtant for EEPROM.
     /* RTC */
@@ -78,11 +78,12 @@ int main(void)  {
   
 
     while(1) {
-    
+        //_delay_ms(25);
         usrpEepromUpdate();
         adcRun();
         check();
-		
+		//PORTB.OUTTGL=PIN3_bm;
+
 		//printf("Result: %f\n", USRP.temperature.temperature);
 
     }

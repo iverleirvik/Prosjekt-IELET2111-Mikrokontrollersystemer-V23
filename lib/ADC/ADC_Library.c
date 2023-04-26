@@ -16,10 +16,10 @@ void ADC_init(void)
 	PORTD.PIN6CTRL |= PORT_ISC_INPUT_DISABLE_gc;
 	
 	/* Disable pull-up resistor */
-	PORTD.PIN6CTRL &= ~PORT_PULLUPEN_bm;
-	
+	PORTD.PINCONFIG=(PORT_PULLUPEN_bm);
+	PORTD.PINCTRLCLR=(PIN4_bm |PIN5_bm | PIN6_bm |PIN7_bm );
 	ADC0.CTRLC = ADC_PRESC_DIV4_gc; /* CLK_PER divided by 4 */
-	VREF.ADC0REF = VREF_REFSEL_VDD_gc; /* VDD as reference */
+	VREF.ADC0REF = VREF_REFSEL_2V500_gc; /* VDD as reference */
 	
 	ADC0.CTRLA = ADC_ENABLE_bm /* ADC Enable: enabled */
 	| ADC_RESSEL_10BIT_gc; /* 10-bit mode */
@@ -48,14 +48,14 @@ float temp(float adcVal){
 
 float spenningMCU(uint16_t adcVal){
 	
-	float V_in = (float)(adcVal * 3.3* 2.0)/1023.0 ; // 2. Since we are measuring over a symetric voltage divider
+	float V_in = (float)(adcVal * 2.5* 2.0)/1023.0 ; // 2. Since we are measuring over a symetric voltage divider
 	
 	return V_in;
 }
 
 float spenningEkstern(uint16_t adcVal){
 	// 6.6 because we are measuring over a 1K, with a 5.6K in series.
-	float V_in = adcVal * (3.3/1023.0) * (6.6);		
+	float V_in = adcVal * ((2.5*6.6)/1023.0) ;		
 	
 	return V_in;
 }
@@ -91,17 +91,17 @@ void adcRun(void){
 		
 		case adcInternalVoltage:
 		default:	
-			ADC0.MUXPOS = ADC_MUXPOS_AIN5_gc;
+			ADC0.MUXPOS = ADC_MUXPOS_AIN5_gc;//PD5
 			ADC0.MUXNEG = ADC_MUXNEG_GND_gc;		
 			break;
 
 		case adcTemperature:
-			ADC0.MUXPOS = ADC_MUXPOS_AIN6_gc; 
+			ADC0.MUXPOS = ADC_MUXPOS_AIN6_gc; //PD6
 			break;
 			
 		case adcExternalVoltage:
-			ADC0.MUXPOS = ADC_MUXPOS_AIN4_gc;
-			ADC0.MUXNEG = ADC_MUXNEG_AIN15_gc;
+			ADC0.MUXPOS = ADC_MUXPOS_AIN4_gc;//PD4
+			ADC0.MUXNEG = ADC_MUXNEG_GND_gc;//PD7
 			break;
 		
 	}
