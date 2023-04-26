@@ -53,10 +53,11 @@ int main(void)  {
     
     
   sei();
-    //Initialize Memory to 0x00
+    //Initialize viritualMemory to 0x00
     for (uint8_t i = 0; i < DATA_SIZE; i++) {
         _dataMap.TWI[i] = 0x00;
     }
+    //move eeprom values to viritualMemory
     usrpEepromInit();
     // set ID and version for this device.
     _dataMap.avr.system.id=ID;
@@ -65,10 +66,10 @@ int main(void)  {
     ViritualMemoryInit(&_dataMap.TWI, DATA_SIZE);
     
     //assign handlers for i2c/TWI
-    TWI_assignByteWriteHandler(&_TWI_StoreByte);
-    TWI_assignByteReadHandler(&_TWI_RequestByte);
-    TWI_assignStopHandler(&_onTWIStop);
-    TWI_assignadressHandler(&_TWI_SetAdressPointer);
+    TWI_assignByteWriteHandler(&_TWI_StoreByte);    //handler for writing to register.
+    TWI_assignByteReadHandler(&_TWI_RequestByte);   //handler for reading to register.
+    TWI_assignStopHandler(&_onTWIStop);             //handler for stop-bit.      
+    TWI_assignadressHandler(&_TWI_SetAdressPointer);//handler for updating register pointer.
     
 //Setup TWI I/O
     TWI_initPins(); 
