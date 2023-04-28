@@ -85,7 +85,7 @@ extern "C" {
 
     static const uint16_t writeProtection[16]={
     /*    fedcba9876543210 */
-        0b0001000000001111, /*system*/
+        0b0000000011111111, /*system*/
         0b0001000000001111, /*temperature*/
         0b0001000000001111, /*MCU voltage*/
         0b0001000000001111, /*external voltage*/
