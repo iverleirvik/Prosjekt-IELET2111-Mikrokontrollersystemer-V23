@@ -29,7 +29,8 @@ int USART3_printChar(const char character, FILE *stream);
 FILE USART_stream = FDEV_SETUP_STREAM(USART3_printChar, NULL, _FDEV_SETUP_WRITE);
 
 int main(void)  {
-	//PORTB.DIR|=PIN3_bm;
+    _delay_ms(20);// delay for more stabile voltage
+	PORTB.DIR|=PIN3_bm;
 	USART3_init();
     brownOutInit();//mainly improtant for EEPROM.
     /* RTC */
@@ -79,11 +80,11 @@ int main(void)  {
   
 
     while(1) {
-        //_delay_ms(25);
+
         usrpEepromUpdate();
         adcRun();
         check();
-		//PORTB.OUTTGL=PIN3_bm;
+		
 
 		//printf("Result: %f\n", USRP.temperature.temperature);
 

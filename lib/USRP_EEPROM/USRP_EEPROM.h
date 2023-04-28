@@ -10,7 +10,10 @@ extern "C" {
 #ifndef USRP
 #define USRP _dataMap.avr
 #endif
-
+    //set to 1 if it is currently writing to eeprom
+    static volatile uint8_t IsBelowTrheshold;
+    static volatile uint16_t EEPROM_UPDATE_STATE = 0;
+    static volatile uint32_t eepromTimeoutTime=0;
     struct EEPROM_system_t {
     };
 

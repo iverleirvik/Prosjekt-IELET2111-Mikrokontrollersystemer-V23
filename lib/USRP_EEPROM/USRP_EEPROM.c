@@ -4,6 +4,7 @@
 #include "USRP_EEPROM.h"
 #include "i2cIO.h"
 #include <util/atomic.h>
+#include <util/delay.h>
 //macro for easy definition of eeprom mapping.
 #define USRP_EEPROM_READ_word(x)  x =eeprom_read_word((void*)&EEPROM_##x)
 #define USRP_EEPROM_READ_float(x)  x =eeprom_read_float((void*)&EEPROM_##x)
@@ -13,7 +14,8 @@
 #define USRP_EEPROM_UPDATE_float(x)  eeprom_update_float((void*)&EEPROM_##x,x)
 
 #define USRP_EEPROM_UPDATE_byte(x)  eeprom_update_byte((void*)&EEPROM_##x,x)
-uint16_t EEPROM_UPDATE_STATE = 0;
+
+#define MINIMUM_VOLTAGE 2.4
 struct EEPROM_memMapStruct EEMEM EEPROM_USRP;
 
 void usrpEepromInit() {
@@ -66,10 +68,16 @@ void usrpEepromInit() {
 }
 
 void usrpEepromUpdate() {
+        
+    //unlock if measured voltage is high enough.
+    //can give a overflow problem if it runs for 130 years.
+    if ((USRP.system.runtimeSeconds>=eepromTimeoutTime) &&(USRP.selfVoltage.voltage >=MINIMUM_VOLTAGE)){
+        IsBelowTrheshold=0;
+        eepromTimeoutTime=0;
+    }
+    //check if eeprom is ready. lock if low voltage monitor interrupt has occured.
+    if ((!(NVMCTRL.STATUS & NVMCTRL_EEBUSY_bm)) && (!IsBelowTrheshold)) {
 
-    if (!(NVMCTRL.STATUS & NVMCTRL_EEBUSY_bm)) {
-
-        ATOMIC_BLOCK(ATOMIC_FORCEON) {
             switch (EEPROM_UPDATE_STATE) {
                 default:
                     EEPROM_UPDATE_STATE = 0;
@@ -114,6 +122,6 @@ void usrpEepromUpdate() {
             }
             //update next eeprom adress on next functioncall.
             EEPROM_UPDATE_STATE++;
-        }
+        
     }
 }

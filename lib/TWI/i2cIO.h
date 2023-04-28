@@ -21,7 +21,8 @@ extern "C" {
         uint16_t version; //2
         //device ID           
         uint16_t id; //2
-        uint8_t reserved0[12];
+        uint32_t runtimeSeconds;//4
+        uint8_t reserved0[8];
     };
 
     struct __attribute__((packed)) temperature_t {

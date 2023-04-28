@@ -33,7 +33,7 @@ ISR(RTC_CNT_vect)	{
 	
 	// Run if the intterupt flag is activated.
 	if(RTC.INTFLAGS & RTC_OVF_bm)	{
-			
+			USRP.system.runtimeSeconds++;//current ontime.
 			// Saving fan speed to I2C-slave functionality through TCA-count and posFlankToRPM function.
 			USRP.leftFan.rotationsPerMinute = posFlankToRPM(TCA0.SINGLE.CNT,USRP.leftFan.pulsesPerRotation);
 			TCA0.SINGLE.CNT	= 0; // Clear the counter to prepare for next measurement.
