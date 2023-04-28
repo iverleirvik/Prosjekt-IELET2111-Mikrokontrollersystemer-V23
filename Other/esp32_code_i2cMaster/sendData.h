@@ -99,4 +99,31 @@ union readBuffer_t tempBuffer;
 }
 
 
+uint16_t readInt32(int address, uint8_t registerAdress){
+  union readBuffer_t{
+
+  uint32_t dwordValue;
+  uint8_t byteValue[4];
+};
+union readBuffer_t tempBuffer;
+
+  int i=0;
+  Wire.beginTransmission(address); // transmit to device #4
+  Wire.write(registerAdress);              // set pointer to 0
+  Wire.endTransmission();    // stop transmitting
+
+  Wire.requestFrom(address, 4);
+    // Perform read request from slave address i2cAdress and read 8 byte
+    while (Wire.available()) {
+      tempBuffer.byteValue[i] = Wire.read();    // Receive a byte as character
+      i++;
+    }
+      
+      return tempBuffer.dwordValue;
+}
+
+
+
+
+
 #endif

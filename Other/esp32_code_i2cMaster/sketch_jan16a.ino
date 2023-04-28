@@ -35,11 +35,15 @@ void setup() {
   writeInt16(i2cAdress, USRP_RIGHTFAN_HIGHERLIMIT, 1000);
 
 
+
 }
 void loop() {
 
 
   delay(1000);
+  if (USRP_SYSTEM_VERSION_INTENDED_VERSION==readInt16(i2cAdress, USRP_SYSTEM_VERSION)){
+  Serial.print("USRP_SYSTEM_RUNTIMESECONDS:      ");
+  Serial.println(readInt32(i2cAdress, USRP_SYSTEM_RUNTIMESECONDS), DEC);  
   Serial.print("USRP_TEMPERATURE_LOWERLIMIT:      ");
   Serial.println(readFloat(i2cAdress, USRP_TEMPERATURE_LOWERLIMIT), 2);
   Serial.print("USRP_TEMPERATURE_HIGHERLIMIT:     ");
@@ -85,6 +89,9 @@ void loop() {
   Serial.print("    USRP_RIGHTFAN_STATUS:                 ");
   Serial.println(readInt8(i2cAdress, USRP_RIGHTFAN_STATUS),HEX);
   Serial.println();
+  }else{
+    Serial.println("mismach between h-file version and client version.");
+  }
 
 
 }

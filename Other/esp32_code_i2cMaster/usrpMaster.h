@@ -1,8 +1,5 @@
 #ifndef USRPMASSTER_H
 #define USRPMASSTER_H
-#ifdef  __cplusplus
-extern "C" {
-#endif
 
 //the intended version wich this headerfile is meant for.
 #define USRP_SYSTEM_VERSION_INTENDED_VERSION        0x0000
@@ -11,6 +8,8 @@ extern "C" {
 #define USRP_SYSTEM_VERSION_length                  2
 #define USRP_SYSTEM_ID                              0x2
 #define USRP_SYSTEM_VERSION_length                  2
+#define USRP_SYSTEM_RUNTIMESECONDS                  0x4
+#define USRP_SYSTEM_RUNTIMESECONDS_length           4
 
 
 #define USRP_TEMPERATURE_TEMPERATURE                0x10
@@ -80,14 +79,6 @@ extern "C" {
 //bit definitions for status
 #define USRP_RIGHTFAN_STATUS_alarm_bp                0
 #define USRP_RIGHTFAN_STATUS_alarm_bm   (1 << USRP_RIGHTFAN_STATUS_alarm_bp)
-
-
-#ifdef  __cplusplus
-}
-#endif
-
-
-
 
 
 
