@@ -10,7 +10,6 @@ void checkTemp(void) {
     else {
         PORTE.OUTCLR = PIN0_bm; // Turn off LED.
         USRP.temperature.STATUS &= ~USRP_TEMPERATURE_STATUS_alarm_bm; // Deactivate flag in STATUS-register.
-        //USRP.temperature.STATUS &= ~usrp_master.temperature.STATUS_bit.alarm_bm;
     }
 }
 
