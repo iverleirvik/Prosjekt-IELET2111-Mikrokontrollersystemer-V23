@@ -42,7 +42,7 @@ void loop() {
 
   delay(1000);
   if (USRP_SYSTEM_VERSION_INTENDED_VERSION==readInt16(i2cAdress, USRP_SYSTEM_VERSION)){
-  Serial.print("USRP_SYSTEM_RUNTIMESECONDS:      ");
+  Serial.print("    USRP_SYSTEM_RUNTIMESECONDS:            ");
   Serial.println(readInt32(i2cAdress, USRP_SYSTEM_RUNTIMESECONDS), DEC);  
   Serial.print("USRP_TEMPERATURE_LOWERLIMIT:      ");
   Serial.println(readFloat(i2cAdress, USRP_TEMPERATURE_LOWERLIMIT), 2);
@@ -97,40 +97,4 @@ void loop() {
 }
 
 
-// Wire Master Writer
-// by Nicholas Zambetti <http://www.zambetti.com>
 
-// Demonstrates use of the Wire library
-// Writes data to an I2C/TWI Peripheral device
-// Refer to the "Wire Peripheral Receiver" example for use with this
-
-// Created 29 March 2006
-
-// This example code is in the public domain.
-
-/*
-  #include <Wire.h>
-
-  void setup()
-  {
-  Wire.begin(); // join i2c bus (address optional for master)
-  pinMode(LED_BUILTIN, OUTPUT);
-  Serial.begin(9600);
-  }
-
-  byte x = 1;
-
-  void loop()
-  {
-  Wire.beginTransmission(0x4D); // transmit to device #4
-  //Wire.write("x is ");        // sends five bytes
-  Wire.write(x);              // sends one byte
-  Wire.endTransmission();    // stop transmitting
-
-  Serial.println("erlend");
-  //x++;
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(500);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(500);
-  } */
