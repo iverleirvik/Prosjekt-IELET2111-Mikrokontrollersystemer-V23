@@ -35,8 +35,8 @@ float temp(float adcVal){
 
 	// Variables used within the bit-to-temperature conversion function. 
 	// Pay attention to the period added to every variable and constant.
-	float U_th, R_th, R_1 = 10000.0, U = 3.3, B = 3950.0, R_0 = 10000.0, T_0 = 298.0, T_inv, T;
-	
+	float U_th, R_th, R_1 = 10000.0, B = 3950.0, R_0 = 10000.0, T_0 = 298.0, T_inv, T;
+	float  U = USRP.selfVoltage.voltage;
 	// calculate temperature using thermistor.
 	U_th = adcVal * U/1023.0;
 	R_th = (R_1*U_th)/(U - U_th);

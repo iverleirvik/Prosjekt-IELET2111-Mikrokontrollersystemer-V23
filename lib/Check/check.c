@@ -3,7 +3,7 @@
 
 void checkTemp(void) {
      // Limits taken from the I2C-slave functionality.
-    if (USRP.temperature.temperature > USRP.temperature.higherLimit) {
+    if ((USRP.temperature.temperature > USRP.temperature.higherLimit)||(USRP.temperature.temperature < USRP.temperature.lowerLimit)) {
         PORTE.OUTSET = PIN0_bm; // Turn on LED.
         USRP.temperature.STATUS |= USRP_TEMPERATURE_STATUS_alarm_bm; // Activate flag in STATUS-register.
     }
@@ -15,7 +15,7 @@ void checkTemp(void) {
 
 void checkSelfVolt(void) {
      // Limits taken from the I2C-slave functionality.
-    if (USRP.selfVoltage.voltage > USRP.selfVoltage.higherLimit) {
+    if ((USRP.selfVoltage.voltage > USRP.selfVoltage.higherLimit) || (USRP.selfVoltage.voltage < USRP.selfVoltage.lowerLimit)) {
         PORTE.OUTSET = PIN1_bm; //TT Turn on LED.
         USRP.selfVoltage.STATUS |= USRP_SELFVOLTAGE_STATUS_alarm_bm; // Activate flag in STATUS-register.
     }
@@ -27,7 +27,7 @@ void checkSelfVolt(void) {
 
 void checkExtVolt(void) {
      // Limits taken from the I2C-slave functionality.
-    if (USRP.externalVoltage.voltage > USRP.externalVoltage.higherLimit) {
+    if ((USRP.externalVoltage.voltage > USRP.externalVoltage.higherLimit)||(USRP.externalVoltage.voltage < USRP.externalVoltage.lowerLimit)) {
         PORTE.OUTSET = PIN2_bm; // Turn on LED.
         USRP.externalVoltage.STATUS |= USRP_EXTERNALVOLTAGE_STATUS_alarm_bm; // Activate flag in STATUS-register.
     }

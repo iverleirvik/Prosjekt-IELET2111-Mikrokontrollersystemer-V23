@@ -43,7 +43,7 @@ ISR(RTC_CNT_vect)	{
 			TCA1.SINGLE.CNT	= 0; // Clear the counter to prepare for next measurement.
 		
 			// Check the fan speeds and set the STATUS of the fans if fanTiming allows it.
-			if(USRP.leftFan.rotationsPerMinute < USRP.leftFan.lowerLimit && USRP.rightFan.rotationsPerMinute < USRP.rightFan.lowerLimit) {
+			if(((USRP.leftFan.rotationsPerMinute < USRP.leftFan.lowerLimit)||(USRP.leftFan.rotationsPerMinute > USRP.leftFan.higherLimit)) && ((USRP.rightFan.rotationsPerMinute < USRP.rightFan.lowerLimit)||(USRP.rightFan.rotationsPerMinute > USRP.rightFan.higherLimit))) {
 				fanTiming++;
 				if (fanTiming > 30){
 					USRP.leftFan.STATUS |= USRP_LEFTFAN_STATUS_alarm_bm;
